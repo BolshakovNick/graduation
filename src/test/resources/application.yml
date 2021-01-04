@@ -1,0 +1,29 @@
+spring:
+  liquibase:
+    enabled: false
+  mail:
+    properties:
+      "[mail.smtp.auth]": true
+      "[mail.smtp.starttls.enable]": true
+      "[mail.smtp.host]": smtp.gmail.com
+      "[mail.smtp.ssl.trust]": smtp.gmail.com
+    host: smtp.gmail.com
+    port: 587
+    username: dishes.rating@gmail.com
+    password: QAZxsw123654
+  data:
+    web:
+      pageable:
+        max-page-size: 3
+voting:
+  allowed-seconds-to-vote-from-start-of-day: 39600s
+jwt:
+  access-secret: EIvnwoevsdm23f-_ewv.eve,@evmaobr
+  access-expiration: 86400
+  refresh-secret: vkrmvisremgisevMIWEvOJ12_21=.,ECVV
+  refresh-expiration: 90000
+verification:
+  token-expiration: 36000
+  endpoint-url: http://localhost:8080/authorization/registration-confirm?uuid=
+  message-pattern: "%s<br> <a href=\"%s\">%s</a>"
+  message-subject: Registration Confirmation

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+                   http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <include file="changesets/1_init_schema_users.sql" relativeToChangelogFile="true"/>
+    <include file="changesets/2_init_schema_restaurant.sql" relativeToChangelogFile="true"/>
+    <include file="changesets/3_init_schema_vote.sql" relativeToChangelogFile="true"/>
+    <include file="changesets/4_init_schema_menu.sql" relativeToChangelogFile="true"/>
+    <include file="changesets/5_init_schema_dish.sql" relativeToChangelogFile="true"/>
+    <include file="changesets/6_remove_password_length_limitation.sql" relativeToChangelogFile="true"/>
+    <include file="changesets/7_change_price_type.sql" relativeToChangelogFile="true"/>
+    <include file="changesets/8_init_schema_token.sql" relativeToChangelogFile="true"/>
+    <include file="changesets/9_add_column_to_users.sql" relativeToChangelogFile="true"/>
+</databaseChangeLog>
