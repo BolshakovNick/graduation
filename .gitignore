@@ -2,5 +2,8 @@
 out
 target
 *.iml
-log
 *.patch
+
+/logging
+
+.mvn
