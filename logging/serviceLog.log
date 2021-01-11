@@ -1,359 +1,31 @@
-2021-01-04 11:45:38.402 INFO  [background-preinit] [Version] : HV000001: Hibernate Validator 6.1.5.Final
-2021-01-04 11:45:38.416 INFO  [main] [StartupInfoLogger] : Starting DishesRatingApplication on DESKTOP-CDPVALQ with PID 23564 (C:\projectsJava\graduation\target\classes started by Local in C:\projectsJava\graduation)
-2021-01-04 11:45:38.417 INFO  [main] [SpringApplication] : No active profile set, falling back to default profiles: default
-2021-01-04 11:45:39.206 INFO  [main] [RepositoryConfigurationDelegate] : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2021-01-04 11:45:39.311 INFO  [main] [RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 99ms. Found 6 JPA repository interfaces.
-2021-01-04 11:45:39.860 INFO  [main] [TomcatWebServer] : Tomcat initialized with port(s): 8080 (http)
-2021-01-04 11:45:39.868 INFO  [main] [DirectJDKLog] : Initializing ProtocolHandler ["http-nio-8080"]
-2021-01-04 11:45:39.869 INFO  [main] [DirectJDKLog] : Starting service [Tomcat]
-2021-01-04 11:45:39.869 INFO  [main] [DirectJDKLog] : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2021-01-04 11:45:39.975 INFO  [main] [DirectJDKLog] : Initializing Spring embedded WebApplicationContext
-2021-01-04 11:45:39.975 INFO  [main] [ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1518 ms
-2021-01-04 11:45:40.092 INFO  [main] [HikariDataSource] : HikariPool-1 - Starting...
-2021-01-04 11:45:40.255 INFO  [main] [HikariDataSource] : HikariPool-1 - Start completed.
-2021-01-04 11:45:40.921 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM public.databasechangeloglock
-2021-01-04 11:45:40.925 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM public.databasechangeloglock
-2021-01-04 11:45:40.926 INFO  [main] [Slf4jLogger] : SELECT LOCKED FROM public.databasechangeloglock WHERE ID=1
-2021-01-04 11:45:40.935 INFO  [main] [Slf4jLogger] : Successfully acquired change log lock
-2021-01-04 11:45:42.121 INFO  [main] [Slf4jLogger] : SELECT MD5SUM FROM public.databasechangelog WHERE MD5SUM IS NOT NULL LIMIT 1
-2021-01-04 11:45:42.123 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM public.databasechangelog
-2021-01-04 11:45:42.124 INFO  [main] [Slf4jLogger] : Reading from public.databasechangelog
-2021-01-04 11:45:42.124 INFO  [main] [Slf4jLogger] : SELECT * FROM public.databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2021-01-04 11:45:42.136 INFO  [main] [Slf4jLogger] : Successfully released change log lock
-2021-01-04 11:45:42.173 INFO  [main] [ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-04 11:45:42.249 INFO  [task-1] [LogHelper] : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-04 11:45:42.294 INFO  [task-1] [Version] : HHH000412: Hibernate ORM core version 5.4.21.Final
-2021-01-04 11:45:42.374 INFO  [task-1] [JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-01-04 11:45:42.380 WARN  [main] [JpaBaseConfiguration$JpaWebConfiguration] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-04 11:45:42.458 INFO  [task-1] [Dialect] : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-2021-01-04 11:45:42.842 INFO  [main] [DefaultSecurityFilterChain] : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40ef1198, org.springframework.security.web.context.SecurityContextPersistenceFilter@11034fdb, org.springframework.security.web.header.HeaderWriterFilter@150963fe, org.springframework.security.web.authentication.logout.LogoutFilter@305230ea, ru.bolshakov.internship.dishes_rating.security.JwtTokenFilter@4c2ab536, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a524c6b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5784f6b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72161dbb, org.springframework.security.web.session.SessionManagementFilter@5d3c0735, org.springframework.security.web.access.ExceptionTranslationFilter@14738629, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@231d5119]
-2021-01-04 11:45:43.011 INFO  [task-1] [JtaPlatformInitiator] : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-04 11:45:43.017 INFO  [task-1] [AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-04 11:45:43.055 INFO  [main] [DirectJDKLog] : Starting ProtocolHandler ["http-nio-8080"]
-2021-01-04 11:45:43.075 INFO  [main] [TomcatWebServer] : Tomcat started on port(s): 8080 (http) with context path ''
-2021-01-04 11:45:43.395 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:45:43.401 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:45:43.402 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
-2021-01-04 11:45:43.516 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:45:43.517 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:45:43.517 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
-2021-01-04 11:45:43.517 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
-2021-01-04 11:45:43.517 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
-2021-01-04 11:45:43.518 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
-2021-01-04 11:45:43.557 INFO  [main] [DeferredRepositoryInitializationListener] : Triggering deferred initialization of Spring Data repositories…
-2021-01-04 11:45:43.878 INFO  [main] [DeferredRepositoryInitializationListener] : Spring Data repositories initialized!
-2021-01-04 11:45:43.891 INFO  [main] [StartupInfoLogger] : Started DishesRatingApplication in 5.904 seconds (JVM running for 6.508)
-2021-01-04 11:48:45.978 INFO  [background-preinit] [Version] : HV000001: Hibernate Validator 6.1.5.Final
-2021-01-04 11:48:45.989 INFO  [main] [StartupInfoLogger] : Starting DishesRatingApplication on DESKTOP-CDPVALQ with PID 19000 (C:\projectsJava\graduation\target\classes started by Local in C:\projectsJava\graduation)
-2021-01-04 11:48:45.989 INFO  [main] [SpringApplication] : No active profile set, falling back to default profiles: default
-2021-01-04 11:48:46.791 INFO  [main] [RepositoryConfigurationDelegate] : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2021-01-04 11:48:46.898 INFO  [main] [RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 102ms. Found 6 JPA repository interfaces.
-2021-01-04 11:48:47.436 INFO  [main] [TomcatWebServer] : Tomcat initialized with port(s): 8080 (http)
-2021-01-04 11:48:47.443 INFO  [main] [DirectJDKLog] : Initializing ProtocolHandler ["http-nio-8080"]
-2021-01-04 11:48:47.443 INFO  [main] [DirectJDKLog] : Starting service [Tomcat]
-2021-01-04 11:48:47.443 INFO  [main] [DirectJDKLog] : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2021-01-04 11:48:47.569 INFO  [main] [DirectJDKLog] : Initializing Spring embedded WebApplicationContext
-2021-01-04 11:48:47.569 INFO  [main] [ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1546 ms
-2021-01-04 11:48:47.711 INFO  [main] [HikariDataSource] : HikariPool-1 - Starting...
-2021-01-04 11:48:47.801 INFO  [main] [HikariDataSource] : HikariPool-1 - Start completed.
-2021-01-04 11:48:48.461 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:48:48.467 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
-2021-01-04 11:48:48.471 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:48:48.474 INFO  [main] [Slf4jLogger] : DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:48:48.475 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
-2021-01-04 11:48:48.477 INFO  [main] [Slf4jLogger] : SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
-2021-01-04 11:48:48.483 INFO  [main] [Slf4jLogger] : Successfully acquired change log lock
-2021-01-04 11:48:49.544 INFO  [main] [Slf4jLogger] : Creating database history table with name: PUBLIC.DATABASECHANGELOG
-2021-01-04 11:48:49.546 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
-2021-01-04 11:48:49.547 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
-2021-01-04 11:48:49.547 INFO  [main] [Slf4jLogger] : Reading from PUBLIC.DATABASECHANGELOG
-2021-01-04 11:48:49.547 INFO  [main] [Slf4jLogger] : SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2021-01-04 11:48:49.548 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:48:49.556 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE user_id_seq START WITH 100000
-2021-01-04 11:48:49.557 INFO  [main] [Slf4jLogger] : CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-)
-2021-01-04 11:48:49.558 ERROR [main] [Slf4jLogger] : Change Set classpath:db/changelog/changesets/1_init_schema_users.sql::1::Bolshakov failed.  Error: Синтаксическая ошибка в выражении SQL "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; ожидалось "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
-Syntax error in SQL statement "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
-CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-) [42001-200] [Failed SQL: (42001) CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-)]
-2021-01-04 11:48:49.559 INFO  [main] [Slf4jLogger] : Successfully released change log lock
-2021-01-04 11:48:49.560 WARN  [main] [AbstractApplicationContext] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:db/changelog/changesets/1_init_schema_users.sql::1::Bolshakov:
-     Reason: liquibase.exception.DatabaseException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; ожидалось "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
-Syntax error in SQL statement "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
-CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-) [42001-200] [Failed SQL: (42001) CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-)]
-2021-01-04 11:48:49.561 INFO  [main] [HikariDataSource] : HikariPool-1 - Shutdown initiated...
-2021-01-04 11:48:49.563 INFO  [main] [HikariDataSource] : HikariPool-1 - Shutdown completed.
-2021-01-04 11:48:49.565 INFO  [main] [DirectJDKLog] : Stopping service [Tomcat]
-2021-01-04 11:48:49.574 INFO  [main] [ConditionEvaluationReportLoggingListener] : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-01-04 11:48:49.580 ERROR [main] [SpringApplication] : Application run failed
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; ожидалось "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
-Syntax error in SQL statement "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
-CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-) [42001-200]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
-	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
-	at org.h2.command.Parser.getSyntaxError(Parser.java:1053)
-	at org.h2.command.Parser.read(Parser.java:4995)
-	at org.h2.command.Parser.readIfMore(Parser.java:1462)
-	at org.h2.command.Parser.parseCreateTable(Parser.java:8380)
-	at org.h2.command.Parser.parseCreate(Parser.java:6276)
-	at org.h2.command.Parser.parsePrepared(Parser.java:903)
-	at org.h2.command.Parser.parse(Parser.java:843)
-	at org.h2.command.Parser.parse(Parser.java:819)
-	at org.h2.command.Parser.prepareCommand(Parser.java:738)
-	at org.h2.engine.Session.prepareLocal(Session.java:657)
-	at org.h2.engine.Session.prepareCommand(Session.java:595)
-	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:398)
-	... 32 common frames omitted
-Wrapped by: liquibase.exception.DatabaseException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; ожидалось "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
-Syntax error in SQL statement "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
-CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-) [42001-200] [Failed SQL: (42001) CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-)]
-	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:402)
-	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:59)
-	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:131)
-	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1276)
-	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1258)
-	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:609)
-	... 27 common frames omitted
-Wrapped by: liquibase.exception.MigrationFailedException: Migration failed for change set classpath:db/changelog/changesets/1_init_schema_users.sql::1::Bolshakov:
-     Reason: liquibase.exception.DatabaseException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; ожидалось "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
-Syntax error in SQL statement "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
-CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-) [42001-200] [Failed SQL: (42001) CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-)]
-	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:646)
-	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:53)
-	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:83)
-	at liquibase.Liquibase.update(Liquibase.java:202)
-	at liquibase.Liquibase.update(Liquibase.java:179)
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:366)
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:314)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
-	... 19 common frames omitted
-Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:db/changelog/changesets/1_init_schema_users.sql::1::Bolshakov:
-     Reason: liquibase.exception.DatabaseException: Синтаксическая ошибка в выражении SQL "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; ожидалось "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"
-Syntax error in SQL statement "CREATE TABLE USERS
-(
-    ID               BIGINT PRIMARY KEY DEFAULT[*] NEXTVAL('user_id_seq'),
-    USER_NAME        VARCHAR(50)        NOT NULL,
-    EMAIL            VARCHAR(256)       NOT NULL,
-    PASSWORD         VARCHAR(50)        NOT NULL,
-    ROLE             VARCHAR(5)         CHECK (ROLE = 'USER' OR ROLE = 'ADMIN')
-)"; expected "HASH, AUTO_INCREMENT, NOT, NULL, COMMENT, CHECK, REFERENCES, ,, )"; SQL statement:
-CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-) [42001-200] [Failed SQL: (42001) CREATE TABLE users
-(
-    id               BIGINT PRIMARY KEY DEFAULT nextval('user_id_seq'),
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
-	at ru.bolshakov.internship.dishes_rating.DishesRatingApplication.main(DishesRatingApplication.java:19)
-2021-01-04 11:50:50.649 INFO  [background-preinit] [Version] : HV000001: Hibernate Validator 6.1.5.Final
-2021-01-04 11:50:50.659 INFO  [main] [StartupInfoLogger] : Starting DishesRatingApplication on DESKTOP-CDPVALQ with PID 22204 (C:\projectsJava\graduation\target\classes started by Local in C:\projectsJava\graduation)
-2021-01-04 11:50:50.660 INFO  [main] [SpringApplication] : No active profile set, falling back to default profiles: default
-2021-01-04 11:50:51.487 INFO  [main] [RepositoryConfigurationDelegate] : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2021-01-04 11:50:51.589 INFO  [main] [RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 96ms. Found 6 JPA repository interfaces.
-2021-01-04 11:50:52.053 INFO  [main] [TomcatWebServer] : Tomcat initialized with port(s): 8080 (http)
-2021-01-04 11:50:52.059 INFO  [main] [DirectJDKLog] : Initializing ProtocolHandler ["http-nio-8080"]
-2021-01-04 11:50:52.059 INFO  [main] [DirectJDKLog] : Starting service [Tomcat]
-2021-01-04 11:50:52.059 INFO  [main] [DirectJDKLog] : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2021-01-04 11:50:52.175 INFO  [main] [DirectJDKLog] : Initializing Spring embedded WebApplicationContext
-2021-01-04 11:50:52.175 INFO  [main] [ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1472 ms
-2021-01-04 11:50:52.290 INFO  [main] [HikariDataSource] : HikariPool-1 - Starting...
-2021-01-04 11:50:52.361 INFO  [main] [HikariDataSource] : HikariPool-1 - Start completed.
-2021-01-04 11:50:53.016 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:50:53.022 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
-2021-01-04 11:50:53.026 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:50:53.029 INFO  [main] [Slf4jLogger] : DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:50:53.030 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
-2021-01-04 11:50:53.032 INFO  [main] [Slf4jLogger] : SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
-2021-01-04 11:50:53.038 INFO  [main] [Slf4jLogger] : Successfully acquired change log lock
-2021-01-04 11:50:54.138 INFO  [main] [Slf4jLogger] : Creating database history table with name: PUBLIC.DATABASECHANGELOG
-2021-01-04 11:50:54.139 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
-2021-01-04 11:50:54.140 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
-2021-01-04 11:50:54.141 INFO  [main] [Slf4jLogger] : Reading from PUBLIC.DATABASECHANGELOG
-2021-01-04 11:50:54.141 INFO  [main] [Slf4jLogger] : SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2021-01-04 11:50:54.142 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:50:54.150 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE user_id_seq START WITH 100000
-2021-01-04 11:50:54.152 INFO  [main] [Slf4jLogger] : CREATE TABLE users
+2021-01-11 15:55:43.526 INFO  [background-preinit] [Version] : HV000001: Hibernate Validator 6.1.5.Final
+2021-01-11 15:55:43.545 INFO  [main] [StartupInfoLogger] : Starting DishesRatingApplication on DESKTOP-CDPVALQ with PID 14628 (C:\projectsJava\graduation\target\classes started by Local in C:\projectsJava\graduation)
+2021-01-11 15:55:43.546 INFO  [main] [SpringApplication] : No active profile set, falling back to default profiles: default
+2021-01-11 15:55:44.324 INFO  [main] [RepositoryConfigurationDelegate] : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-01-11 15:55:44.424 INFO  [main] [RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 94ms. Found 6 JPA repository interfaces.
+2021-01-11 15:55:44.902 INFO  [main] [TomcatWebServer] : Tomcat initialized with port(s): 8080 (http)
+2021-01-11 15:55:44.910 INFO  [main] [DirectJDKLog] : Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-11 15:55:44.910 INFO  [main] [DirectJDKLog] : Starting service [Tomcat]
+2021-01-11 15:55:44.910 INFO  [main] [DirectJDKLog] : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2021-01-11 15:55:45.035 INFO  [main] [DirectJDKLog] : Initializing Spring embedded WebApplicationContext
+2021-01-11 15:55:45.035 INFO  [main] [ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1446 ms
+2021-01-11 15:55:45.133 INFO  [main] [HikariDataSource] : HikariPool-1 - Starting...
+2021-01-11 15:55:45.225 INFO  [main] [HikariDataSource] : HikariPool-1 - Start completed.
+2021-01-11 15:55:45.937 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2021-01-11 15:55:45.942 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2021-01-11 15:55:45.946 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2021-01-11 15:55:45.949 INFO  [main] [Slf4jLogger] : DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2021-01-11 15:55:45.950 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2021-01-11 15:55:45.952 INFO  [main] [Slf4jLogger] : SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2021-01-11 15:55:45.958 INFO  [main] [Slf4jLogger] : Successfully acquired change log lock
+2021-01-11 15:55:47.040 INFO  [main] [Slf4jLogger] : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2021-01-11 15:55:47.041 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2021-01-11 15:55:47.042 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2021-01-11 15:55:47.042 INFO  [main] [Slf4jLogger] : Reading from PUBLIC.DATABASECHANGELOG
+2021-01-11 15:55:47.042 INFO  [main] [Slf4jLogger] : SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2021-01-11 15:55:47.043 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2021-01-11 15:55:47.055 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE user_id_seq START WITH 100000
+2021-01-11 15:55:47.056 INFO  [main] [Slf4jLogger] : CREATE TABLE users
 (
     id               BIGINT DEFAULT nextval('user_id_seq') PRIMARY KEY,
     user_name        VARCHAR(50)        NOT NULL,
@@ -361,173 +33,24 @@ CREATE TABLE users
     password         VARCHAR(50)        NOT NULL,
     role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
 )
-2021-01-04 11:50:54.154 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX users_unique_email_idx ON users (email)
-2021-01-04 11:50:54.156 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:50:54.156 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/1_init_schema_users.sql::1::Bolshakov ran successfully in 7ms
-2021-01-04 11:50:54.157 INFO  [main] [Slf4jLogger] : SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
-2021-01-04 11:50:54.160 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'Bolshakov', 'classpath:db/changelog/changesets/1_init_schema_users.sql', NOW(), 1, '8:652684d61eb8dc098c8be2e3fb7d75e0', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750254142')
-2021-01-04 11:50:54.166 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE restaurant_id_seq START WITH 100000
-2021-01-04 11:50:54.167 INFO  [main] [Slf4jLogger] : CREATE TABLE restaurant
+2021-01-11 15:55:47.058 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX users_unique_email_idx ON users (email)
+2021-01-11 15:55:47.060 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 15:55:47.060 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/1_init_schema_users.sql::1::Bolshakov ran successfully in 8ms
+2021-01-11 15:55:47.061 INFO  [main] [Slf4jLogger] : SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2021-01-11 15:55:47.063 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'Bolshakov', 'classpath:db/changelog/changesets/1_init_schema_users.sql', NOW(), 1, '8:652684d61eb8dc098c8be2e3fb7d75e0', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0369747043')
+2021-01-11 15:55:47.070 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE restaurant_id_seq START WITH 100000
+2021-01-11 15:55:47.070 INFO  [main] [Slf4jLogger] : CREATE TABLE restaurant
 (
     id               BIGINT DEFAULT nextval('restaurant_id_seq') PRIMARY KEY,
     restaurant_name        VARCHAR(50)        NOT NULL,
     description            VARCHAR
 )
-2021-01-04 11:50:54.167 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX restaurant_unique_restaurant_name_idx ON restaurant (restaurant_name)
-2021-01-04 11:50:54.168 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:50:54.168 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/2_init_schema_restaurant.sql::2::Bolshakov ran successfully in 3ms
-2021-01-04 11:50:54.168 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'Bolshakov', 'classpath:db/changelog/changesets/2_init_schema_restaurant.sql', NOW(), 2, '8:f115d96bb1a30ccf5dc0f6c6e37526ea', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750254142')
-2021-01-04 11:50:54.170 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE vote_id_seq START WITH 100000
-2021-01-04 11:50:54.170 INFO  [main] [Slf4jLogger] : CREATE TABLE vote
-(
-    id               BIGINT DEFAULT nextval('vote_id_seq') PRIMARY KEY,
-    voting_datetime  TIMESTAMP                   NOT NULL,
-    user_id          BIGINT                      NOT NULL,
-    restaurant_id    BIGINT                              ,
-    CONSTRAINT vote_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    CONSTRAINT vote_restaurant_id_fkey FOREIGN KEY (restaurant_id) REFERENCES restaurant(id) ON DELETE CASCADE
-)
-2021-01-04 11:50:54.176 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime))
-2021-01-04 11:50:54.177 ERROR [main] [Slf4jLogger] : Change Set classpath:db/changelog/changesets/3_init_schema_vote.sql::3::Bolshakov failed.  Error: Синтаксическая ошибка в выражении SQL "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; ожидалось "ASC, DESC, NULLS, ,, )"
-Syntax error in SQL statement "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; expected "ASC, DESC, NULLS, ,, )"; SQL statement:
-CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime)) [42001-200] [Failed SQL: (42001) CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime))]
-2021-01-04 11:50:54.178 INFO  [main] [Slf4jLogger] : Successfully released change log lock
-2021-01-04 11:50:54.179 WARN  [main] [AbstractApplicationContext] : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:db/changelog/changesets/3_init_schema_vote.sql::3::Bolshakov:
-     Reason: liquibase.exception.DatabaseException: Синтаксическая ошибка в выражении SQL "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; ожидалось "ASC, DESC, NULLS, ,, )"
-Syntax error in SQL statement "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; expected "ASC, DESC, NULLS, ,, )"; SQL statement:
-CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime)) [42001-200] [Failed SQL: (42001) CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime))]
-2021-01-04 11:50:54.180 INFO  [main] [HikariDataSource] : HikariPool-1 - Shutdown initiated...
-2021-01-04 11:50:54.182 INFO  [main] [HikariDataSource] : HikariPool-1 - Shutdown completed.
-2021-01-04 11:50:54.184 INFO  [main] [DirectJDKLog] : Stopping service [Tomcat]
-2021-01-04 11:50:54.194 INFO  [main] [ConditionEvaluationReportLoggingListener] : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-01-04 11:50:54.200 ERROR [main] [SpringApplication] : Application run failed
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; ожидалось "ASC, DESC, NULLS, ,, )"
-Syntax error in SQL statement "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; expected "ASC, DESC, NULLS, ,, )"; SQL statement:
-CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime)) [42001-200]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
-	at org.h2.message.DbException.getSyntaxError(DbException.java:243)
-	at org.h2.command.Parser.getSyntaxError(Parser.java:1053)
-	at org.h2.command.Parser.read(Parser.java:4995)
-	at org.h2.command.Parser.readIfMore(Parser.java:1462)
-	at org.h2.command.Parser.parseIndexColumnList(Parser.java:1397)
-	at org.h2.command.Parser.parseCreate(Parser.java:6327)
-	at org.h2.command.Parser.parsePrepared(Parser.java:903)
-	at org.h2.command.Parser.parse(Parser.java:843)
-	at org.h2.command.Parser.parse(Parser.java:819)
-	at org.h2.command.Parser.prepareCommand(Parser.java:738)
-	at org.h2.engine.Session.prepareLocal(Session.java:657)
-	at org.h2.engine.Session.prepareCommand(Session.java:595)
-	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:398)
-	... 32 common frames omitted
-Wrapped by: liquibase.exception.DatabaseException: Синтаксическая ошибка в выражении SQL "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; ожидалось "ASC, DESC, NULLS, ,, )"
-Syntax error in SQL statement "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; expected "ASC, DESC, NULLS, ,, )"; SQL statement:
-CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime)) [42001-200] [Failed SQL: (42001) CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime))]
-	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:402)
-	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:59)
-	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:131)
-	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1276)
-	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1258)
-	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:609)
-	... 27 common frames omitted
-Wrapped by: liquibase.exception.MigrationFailedException: Migration failed for change set classpath:db/changelog/changesets/3_init_schema_vote.sql::3::Bolshakov:
-     Reason: liquibase.exception.DatabaseException: Синтаксическая ошибка в выражении SQL "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; ожидалось "ASC, DESC, NULLS, ,, )"
-Syntax error in SQL statement "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; expected "ASC, DESC, NULLS, ,, )"; SQL statement:
-CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime)) [42001-200] [Failed SQL: (42001) CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime))]
-	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:646)
-	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:53)
-	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:83)
-	at liquibase.Liquibase.update(Liquibase.java:202)
-	at liquibase.Liquibase.update(Liquibase.java:179)
-	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:366)
-	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:314)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
-	... 19 common frames omitted
-Wrapped by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:db/changelog/changesets/3_init_schema_vote.sql::3::Bolshakov:
-     Reason: liquibase.exception.DatabaseException: Синтаксическая ошибка в выражении SQL "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; ожидалось "ASC, DESC, NULLS, ,, )"
-Syntax error in SQL statement "CREATE UNIQUE INDEX VOTE_UNIQUE_USER_ID_VOTING_DATETIME_IDX ON VOTE (USER_ID, DATE([*]VOTING_DATETIME))"; expected "ASC, DESC, NULLS, ,, )"; SQL statement:
-CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime)) [42001-200] [Failed SQL: (42001) CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, date(voting_datetime))]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
-	at ru.bolshakov.internship.dishes_rating.DishesRatingApplication.main(DishesRatingApplication.java:19)
-2021-01-04 11:53:07.662 INFO  [background-preinit] [Version] : HV000001: Hibernate Validator 6.1.5.Final
-2021-01-04 11:53:07.677 INFO  [main] [StartupInfoLogger] : Starting DishesRatingApplication on DESKTOP-CDPVALQ with PID 27212 (C:\projectsJava\graduation\target\classes started by Local in C:\projectsJava\graduation)
-2021-01-04 11:53:07.678 INFO  [main] [SpringApplication] : No active profile set, falling back to default profiles: default
-2021-01-04 11:53:08.482 INFO  [main] [RepositoryConfigurationDelegate] : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2021-01-04 11:53:08.590 INFO  [main] [RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 103ms. Found 6 JPA repository interfaces.
-2021-01-04 11:53:09.065 INFO  [main] [TomcatWebServer] : Tomcat initialized with port(s): 8080 (http)
-2021-01-04 11:53:09.071 INFO  [main] [DirectJDKLog] : Initializing ProtocolHandler ["http-nio-8080"]
-2021-01-04 11:53:09.072 INFO  [main] [DirectJDKLog] : Starting service [Tomcat]
-2021-01-04 11:53:09.072 INFO  [main] [DirectJDKLog] : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2021-01-04 11:53:09.182 INFO  [main] [DirectJDKLog] : Initializing Spring embedded WebApplicationContext
-2021-01-04 11:53:09.183 INFO  [main] [ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1461 ms
-2021-01-04 11:53:09.288 INFO  [main] [HikariDataSource] : HikariPool-1 - Starting...
-2021-01-04 11:53:09.363 INFO  [main] [HikariDataSource] : HikariPool-1 - Start completed.
-2021-01-04 11:53:09.951 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:53:09.957 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
-2021-01-04 11:53:09.961 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:53:09.964 INFO  [main] [Slf4jLogger] : DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:53:09.965 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
-2021-01-04 11:53:09.967 INFO  [main] [Slf4jLogger] : SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
-2021-01-04 11:53:09.973 INFO  [main] [Slf4jLogger] : Successfully acquired change log lock
-2021-01-04 11:53:11.143 INFO  [main] [Slf4jLogger] : Creating database history table with name: PUBLIC.DATABASECHANGELOG
-2021-01-04 11:53:11.144 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
-2021-01-04 11:53:11.145 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
-2021-01-04 11:53:11.145 INFO  [main] [Slf4jLogger] : Reading from PUBLIC.DATABASECHANGELOG
-2021-01-04 11:53:11.146 INFO  [main] [Slf4jLogger] : SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2021-01-04 11:53:11.146 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:53:11.156 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE user_id_seq START WITH 100000
-2021-01-04 11:53:11.158 INFO  [main] [Slf4jLogger] : CREATE TABLE users
-(
-    id               BIGINT DEFAULT nextval('user_id_seq') PRIMARY KEY,
-    user_name        VARCHAR(50)        NOT NULL,
-    email            VARCHAR(256)       NOT NULL,
-    password         VARCHAR(50)        NOT NULL,
-    role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
-)
-2021-01-04 11:53:11.160 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX users_unique_email_idx ON users (email)
-2021-01-04 11:53:11.162 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:53:11.162 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/1_init_schema_users.sql::1::Bolshakov ran successfully in 8ms
-2021-01-04 11:53:11.163 INFO  [main] [Slf4jLogger] : SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
-2021-01-04 11:53:11.166 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'Bolshakov', 'classpath:db/changelog/changesets/1_init_schema_users.sql', NOW(), 1, '8:652684d61eb8dc098c8be2e3fb7d75e0', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750391147')
-2021-01-04 11:53:11.172 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE restaurant_id_seq START WITH 100000
-2021-01-04 11:53:11.173 INFO  [main] [Slf4jLogger] : CREATE TABLE restaurant
-(
-    id               BIGINT DEFAULT nextval('restaurant_id_seq') PRIMARY KEY,
-    restaurant_name        VARCHAR(50)        NOT NULL,
-    description            VARCHAR
-)
-2021-01-04 11:53:11.173 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX restaurant_unique_restaurant_name_idx ON restaurant (restaurant_name)
-2021-01-04 11:53:11.174 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:53:11.174 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/2_init_schema_restaurant.sql::2::Bolshakov ran successfully in 3ms
-2021-01-04 11:53:11.174 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'Bolshakov', 'classpath:db/changelog/changesets/2_init_schema_restaurant.sql', NOW(), 2, '8:f115d96bb1a30ccf5dc0f6c6e37526ea', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750391147')
-2021-01-04 11:53:11.176 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE vote_id_seq START WITH 100000
-2021-01-04 11:53:11.177 INFO  [main] [Slf4jLogger] : CREATE TABLE vote
+2021-01-11 15:55:47.071 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX restaurant_unique_restaurant_name_idx ON restaurant (restaurant_name)
+2021-01-11 15:55:47.071 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 15:55:47.071 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/2_init_schema_restaurant.sql::2::Bolshakov ran successfully in 2ms
+2021-01-11 15:55:47.072 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'Bolshakov', 'classpath:db/changelog/changesets/2_init_schema_restaurant.sql', NOW(), 2, '8:f115d96bb1a30ccf5dc0f6c6e37526ea', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0369747043')
+2021-01-11 15:55:47.074 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE vote_id_seq START WITH 100000
+2021-01-11 15:55:47.074 INFO  [main] [Slf4jLogger] : CREATE TABLE vote
 (
     id               BIGINT DEFAULT nextval('vote_id_seq') PRIMARY KEY,
     voting_datetime  TIMESTAMP                   NOT NULL,
@@ -537,24 +60,24 @@ CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, da
     CONSTRAINT vote_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     CONSTRAINT vote_restaurant_id_fkey FOREIGN KEY (restaurant_id) REFERENCES restaurant(id) ON DELETE CASCADE
 )
-2021-01-04 11:53:11.183 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, voting_date)
-2021-01-04 11:53:11.183 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:53:11.183 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/3_init_schema_vote.sql::3::Bolshakov ran successfully in 8ms
-2021-01-04 11:53:11.184 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('3', 'Bolshakov', 'classpath:db/changelog/changesets/3_init_schema_vote.sql', NOW(), 3, '8:daa959ccf7414f13ed21e23570cce20b', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750391147')
-2021-01-04 11:53:11.185 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE menu_id_seq START WITH 100000
-2021-01-04 11:53:11.186 INFO  [main] [Slf4jLogger] : CREATE TABLE menu
+2021-01-11 15:55:47.080 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, voting_date)
+2021-01-11 15:55:47.081 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 15:55:47.082 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/3_init_schema_vote.sql::3::Bolshakov ran successfully in 10ms
+2021-01-11 15:55:47.083 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('3', 'Bolshakov', 'classpath:db/changelog/changesets/3_init_schema_vote.sql', NOW(), 3, '8:daa959ccf7414f13ed21e23570cce20b', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0369747043')
+2021-01-11 15:55:47.086 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE menu_id_seq START WITH 100000
+2021-01-11 15:55:47.087 INFO  [main] [Slf4jLogger] : CREATE TABLE menu
 (
     id               BIGINT DEFAULT nextval('menu_id_seq') PRIMARY KEY,
     menu_date        DATE                    NOT NULL,
     restaurant_id    BIGINT                  NOT NULL,
     CONSTRAINT menu_restaurant_id_fkey FOREIGN KEY (restaurant_id) REFERENCES restaurant(id) ON DELETE CASCADE
 )
-2021-01-04 11:53:11.187 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX menu_unique_restaurant_id_menu_datetime_idx ON menu (restaurant_id, menu_date)
-2021-01-04 11:53:11.188 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:53:11.188 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/4_init_schema_menu.sql::4::Bolshakov ran successfully in 4ms
-2021-01-04 11:53:11.189 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('4', 'Bolshakov', 'classpath:db/changelog/changesets/4_init_schema_menu.sql', NOW(), 4, '8:0bde3fed763fdc0e1e8a4832ab3abff9', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750391147')
-2021-01-04 11:53:11.190 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE dish_id_seq START WITH 100000
-2021-01-04 11:53:11.190 INFO  [main] [Slf4jLogger] : CREATE TABLE dish
+2021-01-11 15:55:47.091 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX menu_unique_restaurant_id_menu_datetime_idx ON menu (restaurant_id, menu_date)
+2021-01-11 15:55:47.092 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 15:55:47.093 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/4_init_schema_menu.sql::4::Bolshakov ran successfully in 9ms
+2021-01-11 15:55:47.094 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('4', 'Bolshakov', 'classpath:db/changelog/changesets/4_init_schema_menu.sql', NOW(), 4, '8:0bde3fed763fdc0e1e8a4832ab3abff9', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0369747043')
+2021-01-11 15:55:47.097 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE dish_id_seq START WITH 100000
+2021-01-11 15:55:47.098 INFO  [main] [Slf4jLogger] : CREATE TABLE dish
 (
     id               BIGINT DEFAULT nextval('dish_id_seq') PRIMARY KEY,
     menu_id          BIGINT        NOT NULL,
@@ -562,19 +85,19 @@ CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, da
     price            INTEGER       NOT NULL,
     CONSTRAINT dish_menu_id FOREIGN KEY (menu_id) REFERENCES menu(id) ON DELETE CASCADE
 )
-2021-01-04 11:53:11.192 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:53:11.192 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/5_init_schema_dish.sql::5::Bolshakov ran successfully in 3ms
-2021-01-04 11:53:11.192 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('5', 'Bolshakov', 'classpath:db/changelog/changesets/5_init_schema_dish.sql', NOW(), 5, '8:d3ee0e5bcd6d65ccea0cd362aa4e8dfb', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750391147')
-2021-01-04 11:53:11.193 INFO  [main] [Slf4jLogger] : ALTER TABLE users ALTER column password TYPE VARCHAR
-2021-01-04 11:53:11.201 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:53:11.201 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/6_remove_password_length_limitation.sql::6::Bolshakov ran successfully in 8ms
-2021-01-04 11:53:11.202 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('6', 'Bolshakov', 'classpath:db/changelog/changesets/6_remove_password_length_limitation.sql', NOW(), 6, '8:92cb8348d2ebfef0f56eda93a0722893', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750391147')
-2021-01-04 11:53:11.202 INFO  [main] [Slf4jLogger] : ALTER TABLE dish ALTER column price TYPE BIGINT
-2021-01-04 11:53:11.205 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:53:11.206 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/7_change_price_type.sql::7::Bolshakov ran successfully in 4ms
-2021-01-04 11:53:11.206 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('7', 'Bolshakov', 'classpath:db/changelog/changesets/7_change_price_type.sql', NOW(), 7, '8:cee97088654cbc563bd23d10a7513622', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750391147')
-2021-01-04 11:53:11.208 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE verification_token_id_seq START WITH 100000
-2021-01-04 11:53:11.208 INFO  [main] [Slf4jLogger] : CREATE TABLE verification_token
+2021-01-11 15:55:47.101 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 15:55:47.101 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/5_init_schema_dish.sql::5::Bolshakov ran successfully in 6ms
+2021-01-11 15:55:47.102 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('5', 'Bolshakov', 'classpath:db/changelog/changesets/5_init_schema_dish.sql', NOW(), 5, '8:d3ee0e5bcd6d65ccea0cd362aa4e8dfb', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0369747043')
+2021-01-11 15:55:47.104 INFO  [main] [Slf4jLogger] : ALTER TABLE users ALTER column password TYPE VARCHAR
+2021-01-11 15:55:47.118 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 15:55:47.118 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/6_remove_password_length_limitation.sql::6::Bolshakov ran successfully in 14ms
+2021-01-11 15:55:47.119 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('6', 'Bolshakov', 'classpath:db/changelog/changesets/6_remove_password_length_limitation.sql', NOW(), 6, '8:92cb8348d2ebfef0f56eda93a0722893', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0369747043')
+2021-01-11 15:55:47.121 INFO  [main] [Slf4jLogger] : ALTER TABLE dish ALTER column price TYPE BIGINT
+2021-01-11 15:55:47.124 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 15:55:47.124 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/7_change_price_type.sql::7::Bolshakov ran successfully in 4ms
+2021-01-11 15:55:47.125 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('7', 'Bolshakov', 'classpath:db/changelog/changesets/7_change_price_type.sql', NOW(), 7, '8:cee97088654cbc563bd23d10a7513622', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0369747043')
+2021-01-11 15:55:47.126 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE verification_token_id_seq START WITH 100000
+2021-01-11 15:55:47.127 INFO  [main] [Slf4jLogger] : CREATE TABLE verification_token
 (
     id               BIGINT DEFAULT nextval('verification_token_id_seq') PRIMARY KEY,
     uuid             VARCHAR        NOT NULL,
@@ -582,67 +105,70 @@ CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, da
     expiry_date      TIMESTAMP      NOT NULL,
     CONSTRAINT verification_token_user_id FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 )
-2021-01-04 11:53:11.210 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX verification_token_unique_user_id_idx ON verification_token (user_id)
-2021-01-04 11:53:11.210 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX verification_token_unique_uuid_idx ON verification_token (uuid)
-2021-01-04 11:53:11.211 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:53:11.212 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/8_init_schema_token.sql::8::Bolshakov ran successfully in 5ms
-2021-01-04 11:53:11.213 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('8', 'Bolshakov', 'classpath:db/changelog/changesets/8_init_schema_token.sql', NOW(), 8, '8:d9d2918520e72bf69cac4428c7398fac', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750391147')
-2021-01-04 11:53:11.215 INFO  [main] [Slf4jLogger] : ALTER TABLE users ADD COLUMN enabled BOOLEAN DEFAULT true
-2021-01-04 11:53:11.222 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:53:11.223 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/9_add_column_to_users.sql::9::Bolshakov ran successfully in 9ms
-2021-01-04 11:53:11.224 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('9', 'Bolshakov', 'classpath:db/changelog/changesets/9_add_column_to_users.sql', NOW(), 9, '8:2a7ac989d47bd8915109dafcb3cbb214', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750391147')
-2021-01-04 11:53:11.227 INFO  [main] [Slf4jLogger] : Successfully released change log lock
-2021-01-04 11:53:11.275 INFO  [main] [ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-04 11:53:11.338 INFO  [task-1] [LogHelper] : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-04 11:53:11.379 INFO  [task-1] [Version] : HHH000412: Hibernate ORM core version 5.4.21.Final
-2021-01-04 11:53:11.461 INFO  [task-1] [JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-01-04 11:53:11.487 WARN  [main] [JpaBaseConfiguration$JpaWebConfiguration] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-04 11:53:11.534 INFO  [task-1] [Dialect] : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-04 11:53:11.887 INFO  [main] [DefaultSecurityFilterChain] : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40a32c25, org.springframework.security.web.context.SecurityContextPersistenceFilter@35307365, org.springframework.security.web.header.HeaderWriterFilter@41a940a9, org.springframework.security.web.authentication.logout.LogoutFilter@2ad39f2f, ru.bolshakov.internship.dishes_rating.security.JwtTokenFilter@38bc5ac0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2968d3c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1964a3f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@685280dd, org.springframework.security.web.session.SessionManagementFilter@74c919b2, org.springframework.security.web.access.ExceptionTranslationFilter@1849d35a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11f6a083]
-2021-01-04 11:53:12.027 INFO  [task-1] [JtaPlatformInitiator] : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-04 11:53:12.033 INFO  [task-1] [AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-04 11:53:12.136 INFO  [main] [DirectJDKLog] : Starting ProtocolHandler ["http-nio-8080"]
-2021-01-04 11:53:12.154 INFO  [main] [TomcatWebServer] : Tomcat started on port(s): 8080 (http) with context path ''
-2021-01-04 11:53:12.540 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:53:12.542 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:53:12.542 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
-2021-01-04 11:53:12.633 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:53:12.633 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:53:12.634 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
-2021-01-04 11:53:12.634 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
-2021-01-04 11:53:12.634 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
-2021-01-04 11:53:12.634 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
-2021-01-04 11:53:12.680 INFO  [main] [DeferredRepositoryInitializationListener] : Triggering deferred initialization of Spring Data repositories…
-2021-01-04 11:53:12.975 INFO  [main] [DeferredRepositoryInitializationListener] : Spring Data repositories initialized!
-2021-01-04 11:53:12.984 INFO  [main] [StartupInfoLogger] : Started DishesRatingApplication in 5.794 seconds (JVM running for 6.318)
-2021-01-04 11:55:40.885 INFO  [background-preinit] [Version] : HV000001: Hibernate Validator 6.1.5.Final
-2021-01-04 11:55:40.898 INFO  [main] [StartupInfoLogger] : Starting DishesRatingApplication on DESKTOP-CDPVALQ with PID 28264 (C:\projectsJava\graduation\target\classes started by Local in C:\projectsJava\graduation)
-2021-01-04 11:55:40.899 INFO  [main] [SpringApplication] : No active profile set, falling back to default profiles: default
-2021-01-04 11:55:41.794 INFO  [main] [RepositoryConfigurationDelegate] : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2021-01-04 11:55:41.899 INFO  [main] [RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 100ms. Found 6 JPA repository interfaces.
-2021-01-04 11:55:42.359 INFO  [main] [TomcatWebServer] : Tomcat initialized with port(s): 8080 (http)
-2021-01-04 11:55:42.365 INFO  [main] [DirectJDKLog] : Initializing ProtocolHandler ["http-nio-8080"]
-2021-01-04 11:55:42.366 INFO  [main] [DirectJDKLog] : Starting service [Tomcat]
-2021-01-04 11:55:42.366 INFO  [main] [DirectJDKLog] : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2021-01-04 11:55:42.475 INFO  [main] [DirectJDKLog] : Initializing Spring embedded WebApplicationContext
-2021-01-04 11:55:42.476 INFO  [main] [ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1539 ms
-2021-01-04 11:55:42.599 INFO  [main] [HikariDataSource] : HikariPool-1 - Starting...
-2021-01-04 11:55:42.676 INFO  [main] [HikariDataSource] : HikariPool-1 - Start completed.
-2021-01-04 11:55:43.309 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:55:43.323 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
-2021-01-04 11:55:43.327 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:55:43.331 INFO  [main] [Slf4jLogger] : DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:55:43.332 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
-2021-01-04 11:55:43.335 INFO  [main] [Slf4jLogger] : SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
-2021-01-04 11:55:43.343 INFO  [main] [Slf4jLogger] : Successfully acquired change log lock
-2021-01-04 11:55:44.445 INFO  [main] [Slf4jLogger] : Creating database history table with name: PUBLIC.DATABASECHANGELOG
-2021-01-04 11:55:44.447 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
-2021-01-04 11:55:44.448 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
-2021-01-04 11:55:44.448 INFO  [main] [Slf4jLogger] : Reading from PUBLIC.DATABASECHANGELOG
-2021-01-04 11:55:44.448 INFO  [main] [Slf4jLogger] : SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
-2021-01-04 11:55:44.449 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
-2021-01-04 11:55:44.457 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE user_id_seq START WITH 100000
-2021-01-04 11:55:44.458 INFO  [main] [Slf4jLogger] : CREATE TABLE users
+2021-01-11 15:55:47.128 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX verification_token_unique_user_id_idx ON verification_token (user_id)
+2021-01-11 15:55:47.129 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX verification_token_unique_uuid_idx ON verification_token (uuid)
+2021-01-11 15:55:47.130 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 15:55:47.130 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/8_init_schema_token.sql::8::Bolshakov ran successfully in 5ms
+2021-01-11 15:55:47.130 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('8', 'Bolshakov', 'classpath:db/changelog/changesets/8_init_schema_token.sql', NOW(), 8, '8:d9d2918520e72bf69cac4428c7398fac', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0369747043')
+2021-01-11 15:55:47.131 INFO  [main] [Slf4jLogger] : ALTER TABLE users ADD COLUMN enabled BOOLEAN DEFAULT true
+2021-01-11 15:55:47.134 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 15:55:47.134 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/9_add_column_to_users.sql::9::Bolshakov ran successfully in 3ms
+2021-01-11 15:55:47.135 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('9', 'Bolshakov', 'classpath:db/changelog/changesets/9_add_column_to_users.sql', NOW(), 9, '8:2a7ac989d47bd8915109dafcb3cbb214', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0369747043')
+2021-01-11 15:55:47.136 INFO  [main] [Slf4jLogger] : Successfully released change log lock
+2021-01-11 15:55:47.171 INFO  [main] [ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 15:55:47.226 INFO  [task-1] [LogHelper] : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-11 15:55:47.263 INFO  [task-1] [Version] : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-01-11 15:55:47.342 INFO  [task-1] [JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-11 15:55:47.361 WARN  [main] [JpaBaseConfiguration$JpaWebConfiguration] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-11 15:55:47.424 INFO  [task-1] [Dialect] : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-11 15:55:47.761 INFO  [main] [DefaultSecurityFilterChain] : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b5afde5, org.springframework.security.web.context.SecurityContextPersistenceFilter@73c21b13, org.springframework.security.web.header.HeaderWriterFilter@636d4cdc, org.springframework.security.web.authentication.logout.LogoutFilter@2c62f56f, ru.bolshakov.internship.dishes_rating.security.JwtTokenFilter@2084e65a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1964a3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@de06f28, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a14a8c1, org.springframework.security.web.session.SessionManagementFilter@5536542e, org.springframework.security.web.access.ExceptionTranslationFilter@56a7f57f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2140582]
+2021-01-11 15:55:47.941 INFO  [task-1] [JtaPlatformInitiator] : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-11 15:55:47.948 INFO  [task-1] [AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-11 15:55:47.966 INFO  [main] [DirectJDKLog] : Starting ProtocolHandler ["http-nio-8080"]
+2021-01-11 15:55:47.985 INFO  [main] [TomcatWebServer] : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-11 15:55:48.346 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
+2021-01-11 15:55:48.350 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
+2021-01-11 15:55:48.350 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
+2021-01-11 15:55:48.414 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
+2021-01-11 15:55:48.414 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
+2021-01-11 15:55:48.415 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
+2021-01-11 15:55:48.415 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
+2021-01-11 15:55:48.415 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
+2021-01-11 15:55:48.415 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
+2021-01-11 15:55:48.463 INFO  [main] [DeferredRepositoryInitializationListener] : Triggering deferred initialization of Spring Data repositories…
+2021-01-11 15:55:48.763 INFO  [main] [DeferredRepositoryInitializationListener] : Spring Data repositories initialized!
+2021-01-11 15:55:48.783 INFO  [main] [StartupInfoLogger] : Started DishesRatingApplication in 5.714 seconds (JVM running for 6.289)
+2021-01-11 15:55:58.473 INFO  [http-nio-8080-exec-1] [DirectJDKLog] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 15:55:58.473 INFO  [http-nio-8080-exec-1] [FrameworkServlet] : Initializing Servlet 'dispatcherServlet'
+2021-01-11 15:55:58.478 INFO  [http-nio-8080-exec-1] [FrameworkServlet] : Completed initialization in 5 ms
+2021-01-11 16:00:05.707 INFO  [background-preinit] [Version] : HV000001: Hibernate Validator 6.1.5.Final
+2021-01-11 16:00:05.723 INFO  [main] [StartupInfoLogger] : Starting DishesRatingApplication on DESKTOP-CDPVALQ with PID 26172 (C:\projectsJava\graduation\target\classes started by Local in C:\projectsJava\graduation)
+2021-01-11 16:00:05.724 INFO  [main] [SpringApplication] : No active profile set, falling back to default profiles: default
+2021-01-11 16:00:06.587 INFO  [main] [RepositoryConfigurationDelegate] : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-01-11 16:00:06.700 INFO  [main] [RepositoryConfigurationDelegate] : Finished Spring Data repository scanning in 107ms. Found 6 JPA repository interfaces.
+2021-01-11 16:00:07.190 INFO  [main] [TomcatWebServer] : Tomcat initialized with port(s): 8080 (http)
+2021-01-11 16:00:07.196 INFO  [main] [DirectJDKLog] : Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-11 16:00:07.197 INFO  [main] [DirectJDKLog] : Starting service [Tomcat]
+2021-01-11 16:00:07.197 INFO  [main] [DirectJDKLog] : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2021-01-11 16:00:07.315 INFO  [main] [DirectJDKLog] : Initializing Spring embedded WebApplicationContext
+2021-01-11 16:00:07.315 INFO  [main] [ServletWebServerApplicationContext] : Root WebApplicationContext: initialization completed in 1544 ms
+2021-01-11 16:00:07.428 INFO  [main] [HikariDataSource] : HikariPool-1 - Starting...
+2021-01-11 16:00:07.520 INFO  [main] [HikariDataSource] : HikariPool-1 - Start completed.
+2021-01-11 16:00:08.160 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2021-01-11 16:00:08.165 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOGLOCK (ID INT NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP, LOCKEDBY VARCHAR(255), CONSTRAINT PK_DATABASECHANGELOGLOCK PRIMARY KEY (ID))
+2021-01-11 16:00:08.169 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2021-01-11 16:00:08.172 INFO  [main] [Slf4jLogger] : DELETE FROM PUBLIC.DATABASECHANGELOGLOCK
+2021-01-11 16:00:08.173 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOGLOCK (ID, LOCKED) VALUES (1, FALSE)
+2021-01-11 16:00:08.176 INFO  [main] [Slf4jLogger] : SELECT LOCKED FROM PUBLIC.DATABASECHANGELOGLOCK WHERE ID=1
+2021-01-11 16:00:08.181 INFO  [main] [Slf4jLogger] : Successfully acquired change log lock
+2021-01-11 16:00:09.259 INFO  [main] [Slf4jLogger] : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2021-01-11 16:00:09.261 INFO  [main] [Slf4jLogger] : CREATE TABLE PUBLIC.DATABASECHANGELOG (ID VARCHAR(255) NOT NULL, AUTHOR VARCHAR(255) NOT NULL, FILENAME VARCHAR(255) NOT NULL, DATEEXECUTED TIMESTAMP NOT NULL, ORDEREXECUTED INT NOT NULL, EXECTYPE VARCHAR(10) NOT NULL, MD5SUM VARCHAR(35), DESCRIPTION VARCHAR(255), COMMENTS VARCHAR(255), TAG VARCHAR(255), LIQUIBASE VARCHAR(20), CONTEXTS VARCHAR(255), LABELS VARCHAR(255), DEPLOYMENT_ID VARCHAR(10))
+2021-01-11 16:00:09.262 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG
+2021-01-11 16:00:09.262 INFO  [main] [Slf4jLogger] : Reading from PUBLIC.DATABASECHANGELOG
+2021-01-11 16:00:09.263 INFO  [main] [Slf4jLogger] : SELECT * FROM PUBLIC.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2021-01-11 16:00:09.263 INFO  [main] [Slf4jLogger] : SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK
+2021-01-11 16:00:09.277 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE user_id_seq START WITH 100000
+2021-01-11 16:00:09.278 INFO  [main] [Slf4jLogger] : CREATE TABLE users
 (
     id               BIGINT DEFAULT nextval('user_id_seq') PRIMARY KEY,
     user_name        VARCHAR(50)        NOT NULL,
@@ -650,24 +176,24 @@ CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, da
     password         VARCHAR(50)        NOT NULL,
     role             VARCHAR(5)         CHECK (role = 'USER' OR role = 'ADMIN')
 )
-2021-01-04 11:55:44.460 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX users_unique_email_idx ON users (email)
-2021-01-04 11:55:44.461 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:55:44.462 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/1_init_schema_users.sql::1::Bolshakov ran successfully in 6ms
-2021-01-04 11:55:44.462 INFO  [main] [Slf4jLogger] : SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
-2021-01-04 11:55:44.465 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'Bolshakov', 'classpath:db/changelog/changesets/1_init_schema_users.sql', NOW(), 1, '8:652684d61eb8dc098c8be2e3fb7d75e0', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750544449')
-2021-01-04 11:55:44.471 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE restaurant_id_seq START WITH 100000
-2021-01-04 11:55:44.471 INFO  [main] [Slf4jLogger] : CREATE TABLE restaurant
+2021-01-11 16:00:09.280 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX users_unique_email_idx ON users (email)
+2021-01-11 16:00:09.282 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 16:00:09.282 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/1_init_schema_users.sql::1::Bolshakov ran successfully in 7ms
+2021-01-11 16:00:09.283 INFO  [main] [Slf4jLogger] : SELECT MAX(ORDEREXECUTED) FROM PUBLIC.DATABASECHANGELOG
+2021-01-11 16:00:09.286 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('1', 'Bolshakov', 'classpath:db/changelog/changesets/1_init_schema_users.sql', NOW(), 1, '8:652684d61eb8dc098c8be2e3fb7d75e0', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0370009264')
+2021-01-11 16:00:09.292 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE restaurant_id_seq START WITH 100000
+2021-01-11 16:00:09.292 INFO  [main] [Slf4jLogger] : CREATE TABLE restaurant
 (
     id               BIGINT DEFAULT nextval('restaurant_id_seq') PRIMARY KEY,
     restaurant_name        VARCHAR(50)        NOT NULL,
     description            VARCHAR
 )
-2021-01-04 11:55:44.472 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX restaurant_unique_restaurant_name_idx ON restaurant (restaurant_name)
-2021-01-04 11:55:44.472 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:55:44.472 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/2_init_schema_restaurant.sql::2::Bolshakov ran successfully in 2ms
-2021-01-04 11:55:44.473 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'Bolshakov', 'classpath:db/changelog/changesets/2_init_schema_restaurant.sql', NOW(), 2, '8:f115d96bb1a30ccf5dc0f6c6e37526ea', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750544449')
-2021-01-04 11:55:44.474 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE vote_id_seq START WITH 100000
-2021-01-04 11:55:44.475 INFO  [main] [Slf4jLogger] : CREATE TABLE vote
+2021-01-11 16:00:09.293 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX restaurant_unique_restaurant_name_idx ON restaurant (restaurant_name)
+2021-01-11 16:00:09.293 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 16:00:09.293 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/2_init_schema_restaurant.sql::2::Bolshakov ran successfully in 2ms
+2021-01-11 16:00:09.294 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('2', 'Bolshakov', 'classpath:db/changelog/changesets/2_init_schema_restaurant.sql', NOW(), 2, '8:f115d96bb1a30ccf5dc0f6c6e37526ea', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0370009264')
+2021-01-11 16:00:09.296 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE vote_id_seq START WITH 100000
+2021-01-11 16:00:09.296 INFO  [main] [Slf4jLogger] : CREATE TABLE vote
 (
     id               BIGINT DEFAULT nextval('vote_id_seq') PRIMARY KEY,
     voting_datetime  TIMESTAMP                   NOT NULL,
@@ -677,24 +203,24 @@ CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, da
     CONSTRAINT vote_user_id_fkey FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     CONSTRAINT vote_restaurant_id_fkey FOREIGN KEY (restaurant_id) REFERENCES restaurant(id) ON DELETE CASCADE
 )
-2021-01-04 11:55:44.481 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, voting_date)
-2021-01-04 11:55:44.481 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:55:44.481 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/3_init_schema_vote.sql::3::Bolshakov ran successfully in 8ms
-2021-01-04 11:55:44.482 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('3', 'Bolshakov', 'classpath:db/changelog/changesets/3_init_schema_vote.sql', NOW(), 3, '8:daa959ccf7414f13ed21e23570cce20b', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750544449')
-2021-01-04 11:55:44.483 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE menu_id_seq START WITH 100000
-2021-01-04 11:55:44.484 INFO  [main] [Slf4jLogger] : CREATE TABLE menu
+2021-01-11 16:00:09.302 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, voting_date)
+2021-01-11 16:00:09.303 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 16:00:09.303 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/3_init_schema_vote.sql::3::Bolshakov ran successfully in 8ms
+2021-01-11 16:00:09.303 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('3', 'Bolshakov', 'classpath:db/changelog/changesets/3_init_schema_vote.sql', NOW(), 3, '8:daa959ccf7414f13ed21e23570cce20b', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0370009264')
+2021-01-11 16:00:09.305 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE menu_id_seq START WITH 100000
+2021-01-11 16:00:09.305 INFO  [main] [Slf4jLogger] : CREATE TABLE menu
 (
     id               BIGINT DEFAULT nextval('menu_id_seq') PRIMARY KEY,
     menu_date        DATE                    NOT NULL,
     restaurant_id    BIGINT                  NOT NULL,
     CONSTRAINT menu_restaurant_id_fkey FOREIGN KEY (restaurant_id) REFERENCES restaurant(id) ON DELETE CASCADE
 )
-2021-01-04 11:55:44.485 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX menu_unique_restaurant_id_menu_datetime_idx ON menu (restaurant_id, menu_date)
-2021-01-04 11:55:44.486 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:55:44.486 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/4_init_schema_menu.sql::4::Bolshakov ran successfully in 4ms
-2021-01-04 11:55:44.486 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('4', 'Bolshakov', 'classpath:db/changelog/changesets/4_init_schema_menu.sql', NOW(), 4, '8:0bde3fed763fdc0e1e8a4832ab3abff9', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750544449')
-2021-01-04 11:55:44.488 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE dish_id_seq START WITH 100000
-2021-01-04 11:55:44.488 INFO  [main] [Slf4jLogger] : CREATE TABLE dish
+2021-01-11 16:00:09.307 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX menu_unique_restaurant_id_menu_datetime_idx ON menu (restaurant_id, menu_date)
+2021-01-11 16:00:09.307 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 16:00:09.307 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/4_init_schema_menu.sql::4::Bolshakov ran successfully in 3ms
+2021-01-11 16:00:09.308 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('4', 'Bolshakov', 'classpath:db/changelog/changesets/4_init_schema_menu.sql', NOW(), 4, '8:0bde3fed763fdc0e1e8a4832ab3abff9', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0370009264')
+2021-01-11 16:00:09.309 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE dish_id_seq START WITH 100000
+2021-01-11 16:00:09.309 INFO  [main] [Slf4jLogger] : CREATE TABLE dish
 (
     id               BIGINT DEFAULT nextval('dish_id_seq') PRIMARY KEY,
     menu_id          BIGINT        NOT NULL,
@@ -702,19 +228,19 @@ CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, da
     price            INTEGER       NOT NULL,
     CONSTRAINT dish_menu_id FOREIGN KEY (menu_id) REFERENCES menu(id) ON DELETE CASCADE
 )
-2021-01-04 11:55:44.490 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:55:44.490 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/5_init_schema_dish.sql::5::Bolshakov ran successfully in 3ms
-2021-01-04 11:55:44.490 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('5', 'Bolshakov', 'classpath:db/changelog/changesets/5_init_schema_dish.sql', NOW(), 5, '8:d3ee0e5bcd6d65ccea0cd362aa4e8dfb', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750544449')
-2021-01-04 11:55:44.491 INFO  [main] [Slf4jLogger] : ALTER TABLE users ALTER column password TYPE VARCHAR
-2021-01-04 11:55:44.497 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:55:44.497 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/6_remove_password_length_limitation.sql::6::Bolshakov ran successfully in 6ms
-2021-01-04 11:55:44.498 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('6', 'Bolshakov', 'classpath:db/changelog/changesets/6_remove_password_length_limitation.sql', NOW(), 6, '8:92cb8348d2ebfef0f56eda93a0722893', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750544449')
-2021-01-04 11:55:44.498 INFO  [main] [Slf4jLogger] : ALTER TABLE dish ALTER column price TYPE BIGINT
-2021-01-04 11:55:44.501 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:55:44.501 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/7_change_price_type.sql::7::Bolshakov ran successfully in 3ms
-2021-01-04 11:55:44.502 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('7', 'Bolshakov', 'classpath:db/changelog/changesets/7_change_price_type.sql', NOW(), 7, '8:cee97088654cbc563bd23d10a7513622', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750544449')
-2021-01-04 11:55:44.503 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE verification_token_id_seq START WITH 100000
-2021-01-04 11:55:44.504 INFO  [main] [Slf4jLogger] : CREATE TABLE verification_token
+2021-01-11 16:00:09.311 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 16:00:09.311 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/5_init_schema_dish.sql::5::Bolshakov ran successfully in 3ms
+2021-01-11 16:00:09.312 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('5', 'Bolshakov', 'classpath:db/changelog/changesets/5_init_schema_dish.sql', NOW(), 5, '8:d3ee0e5bcd6d65ccea0cd362aa4e8dfb', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0370009264')
+2021-01-11 16:00:09.312 INFO  [main] [Slf4jLogger] : ALTER TABLE users ALTER column password TYPE VARCHAR
+2021-01-11 16:00:09.318 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 16:00:09.319 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/6_remove_password_length_limitation.sql::6::Bolshakov ran successfully in 7ms
+2021-01-11 16:00:09.319 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('6', 'Bolshakov', 'classpath:db/changelog/changesets/6_remove_password_length_limitation.sql', NOW(), 6, '8:92cb8348d2ebfef0f56eda93a0722893', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0370009264')
+2021-01-11 16:00:09.320 INFO  [main] [Slf4jLogger] : ALTER TABLE dish ALTER column price TYPE BIGINT
+2021-01-11 16:00:09.323 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 16:00:09.323 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/7_change_price_type.sql::7::Bolshakov ran successfully in 3ms
+2021-01-11 16:00:09.324 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('7', 'Bolshakov', 'classpath:db/changelog/changesets/7_change_price_type.sql', NOW(), 7, '8:cee97088654cbc563bd23d10a7513622', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0370009264')
+2021-01-11 16:00:09.325 INFO  [main] [Slf4jLogger] : CREATE SEQUENCE verification_token_id_seq START WITH 100000
+2021-01-11 16:00:09.326 INFO  [main] [Slf4jLogger] : CREATE TABLE verification_token
 (
     id               BIGINT DEFAULT nextval('verification_token_id_seq') PRIMARY KEY,
     uuid             VARCHAR        NOT NULL,
@@ -722,53 +248,39 @@ CREATE UNIQUE INDEX vote_unique_user_id_voting_datetime_idx ON vote (user_id, da
     expiry_date      TIMESTAMP      NOT NULL,
     CONSTRAINT verification_token_user_id FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 )
-2021-01-04 11:55:44.506 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX verification_token_unique_user_id_idx ON verification_token (user_id)
-2021-01-04 11:55:44.507 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX verification_token_unique_uuid_idx ON verification_token (uuid)
-2021-01-04 11:55:44.509 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:55:44.509 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/8_init_schema_token.sql::8::Bolshakov ran successfully in 6ms
-2021-01-04 11:55:44.510 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('8', 'Bolshakov', 'classpath:db/changelog/changesets/8_init_schema_token.sql', NOW(), 8, '8:d9d2918520e72bf69cac4428c7398fac', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750544449')
-2021-01-04 11:55:44.512 INFO  [main] [Slf4jLogger] : ALTER TABLE users ADD COLUMN enabled BOOLEAN DEFAULT true
-2021-01-04 11:55:44.519 INFO  [main] [Slf4jLogger] : Custom SQL executed
-2021-01-04 11:55:44.520 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/9_add_column_to_users.sql::9::Bolshakov ran successfully in 9ms
-2021-01-04 11:55:44.521 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('9', 'Bolshakov', 'classpath:db/changelog/changesets/9_add_column_to_users.sql', NOW(), 9, '8:2a7ac989d47bd8915109dafcb3cbb214', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '9750544449')
-2021-01-04 11:55:44.523 INFO  [main] [Slf4jLogger] : Successfully released change log lock
-2021-01-04 11:55:44.573 INFO  [main] [ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-04 11:55:44.641 INFO  [task-1] [LogHelper] : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-04 11:55:44.679 INFO  [task-1] [Version] : HHH000412: Hibernate ORM core version 5.4.21.Final
-2021-01-04 11:55:44.763 INFO  [task-1] [JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2021-01-04 11:55:44.804 WARN  [main] [JpaBaseConfiguration$JpaWebConfiguration] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-04 11:55:44.841 INFO  [task-1] [Dialect] : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-04 11:55:45.214 INFO  [main] [DefaultSecurityFilterChain] : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a7abd4, org.springframework.security.web.context.SecurityContextPersistenceFilter@74c919b2, org.springframework.security.web.header.HeaderWriterFilter@1849d35a, org.springframework.security.web.authentication.logout.LogoutFilter@4306709f, ru.bolshakov.internship.dishes_rating.security.JwtTokenFilter@4fbb1144, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35307365, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73c21b13, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3846ba32, org.springframework.security.web.session.SessionManagementFilter@3f3e6c03, org.springframework.security.web.access.ExceptionTranslationFilter@5d27a744, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c64e2d0]
-2021-01-04 11:55:45.343 INFO  [task-1] [JtaPlatformInitiator] : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-04 11:55:45.350 INFO  [task-1] [AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-04 11:55:45.419 INFO  [main] [DirectJDKLog] : Starting ProtocolHandler ["http-nio-8080"]
-2021-01-04 11:55:45.438 INFO  [main] [TomcatWebServer] : Tomcat started on port(s): 8080 (http) with context path ''
-2021-01-04 11:55:45.812 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:55:45.817 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:55:45.818 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
-2021-01-04 11:55:45.904 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:55:45.904 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
-2021-01-04 11:55:45.905 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
-2021-01-04 11:55:45.905 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
-2021-01-04 11:55:45.905 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
-2021-01-04 11:55:45.905 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
-2021-01-04 11:55:45.952 INFO  [main] [DeferredRepositoryInitializationListener] : Triggering deferred initialization of Spring Data repositories…
-2021-01-04 11:55:46.242 INFO  [main] [DeferredRepositoryInitializationListener] : Spring Data repositories initialized!
-2021-01-04 11:55:46.251 INFO  [main] [StartupInfoLogger] : Started DishesRatingApplication in 5.757 seconds (JVM running for 6.273)
-2021-01-04 11:56:08.210 INFO  [http-nio-8080-exec-1] [DirectJDKLog] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-01-04 11:56:08.210 INFO  [http-nio-8080-exec-1] [FrameworkServlet] : Initializing Servlet 'dispatcherServlet'
-2021-01-04 11:56:08.216 INFO  [http-nio-8080-exec-1] [FrameworkServlet] : Completed initialization in 6 ms
-2021-01-04 11:56:08.344 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Enter: ru.bolshakov.internship.dishes_rating.service.UserService.create() with argument[s] = request=UserSavingRequestDTO{userName='Nikolay', email='bolshakov_ns99@mail.ru', password='password123'}, 
-2021-01-04 11:56:08.422 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Enter: ru.bolshakov.internship.dishes_rating.service.PasswordService.encode() with argument[s] = rawPassword=password123, 
-2021-01-04 11:56:08.597 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Exit: ru.bolshakov.internship.dishes_rating.service.PasswordService.encode() with result = uWnuc2O/yi1uoFN5ZsyeOvHhQQEw0WprbPwhXj9wEXQ=
-2021-01-04 11:56:08.617 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Enter: ru.bolshakov.internship.dishes_rating.service.UserAccountVerificationService.performUserVerification() with argument[s] = requestDTO=AuthorizationRequestDTO{email='bolshakov_ns99@mail.ru'}, 
-2021-01-04 11:56:08.631 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Enter: ru.bolshakov.internship.dishes_rating.service.PasswordService.encode() with argument[s] = rawPassword=userNotFoundPassword, 
-2021-01-04 11:56:08.761 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Exit: ru.bolshakov.internship.dishes_rating.service.PasswordService.encode() with result = ueEsNiEnn7nJtYRVTs5nock95VxhiFAS+CAd9R8DiCQ=
-2021-01-04 11:56:08.767 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Enter: ru.bolshakov.internship.dishes_rating.service.VerificationTokenService.deleteByUserId() with argument[s] = id=100000, 
-2021-01-04 11:56:08.783 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Exit: ru.bolshakov.internship.dishes_rating.service.VerificationTokenService.deleteByUserId() with result = null
-2021-01-04 11:56:08.784 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Enter: ru.bolshakov.internship.dishes_rating.service.VerificationTokenService.createVerificationTokenForUser() with argument[s] = user=User{id=100000, userName='Nikolay', email='bolshakov_ns99@mail.ru', role=USER}, 
-2021-01-04 11:56:08.791 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Exit: ru.bolshakov.internship.dishes_rating.service.VerificationTokenService.createVerificationTokenForUser() with result = ru.bolshakov.internship.dishes_rating.model.jpa.VerificationToken@429c2557
-2021-01-04 11:56:08.793 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Enter: ru.bolshakov.internship.dishes_rating.service.MailMessageService.sendLetterAsynchronously() with argument[s] = email=bolshakov_ns99@mail.ru, subject=Registration Confirmation, messageText=You registered successfully. To confirm your registration, please click on the below link.<br> <a href="http://localhost:8080/authorization/registration-confirm?uuid=2138f857-3fd5-45d0-8088-d4ddba7b2963">http://localhost:8080/authorization/registration-confirm?uuid=2138f857-3fd5-45d0-8088-d4ddba7b2963</a>, 
-2021-01-04 11:56:08.796 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Exit: ru.bolshakov.internship.dishes_rating.service.MailMessageService.sendLetterAsynchronously() with result = null
-2021-01-04 11:56:08.797 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Exit: ru.bolshakov.internship.dishes_rating.service.UserAccountVerificationService.performUserVerification() with result = null
-2021-01-04 11:56:08.797 INFO  [http-nio-8080-exec-1] [LoggingAspect] : Exit: ru.bolshakov.internship.dishes_rating.service.UserService.create() with result = UserTo{id=100000, userName='Nikolay', email='bolshakov_ns99@mail.ru', role='USER'}
+2021-01-11 16:00:09.327 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX verification_token_unique_user_id_idx ON verification_token (user_id)
+2021-01-11 16:00:09.328 INFO  [main] [Slf4jLogger] : CREATE UNIQUE INDEX verification_token_unique_uuid_idx ON verification_token (uuid)
+2021-01-11 16:00:09.329 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 16:00:09.329 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/8_init_schema_token.sql::8::Bolshakov ran successfully in 4ms
+2021-01-11 16:00:09.330 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('8', 'Bolshakov', 'classpath:db/changelog/changesets/8_init_schema_token.sql', NOW(), 8, '8:d9d2918520e72bf69cac4428c7398fac', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0370009264')
+2021-01-11 16:00:09.330 INFO  [main] [Slf4jLogger] : ALTER TABLE users ADD COLUMN enabled BOOLEAN DEFAULT true
+2021-01-11 16:00:09.334 INFO  [main] [Slf4jLogger] : Custom SQL executed
+2021-01-11 16:00:09.334 INFO  [main] [Slf4jLogger] : ChangeSet classpath:db/changelog/changesets/9_add_column_to_users.sql::9::Bolshakov ran successfully in 4ms
+2021-01-11 16:00:09.335 INFO  [main] [Slf4jLogger] : INSERT INTO PUBLIC.DATABASECHANGELOG (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('9', 'Bolshakov', 'classpath:db/changelog/changesets/9_add_column_to_users.sql', NOW(), 9, '8:2a7ac989d47bd8915109dafcb3cbb214', 'sql', '', 'EXECUTED', NULL, NULL, '3.8.9', '0370009264')
+2021-01-11 16:00:09.336 INFO  [main] [Slf4jLogger] : Successfully released change log lock
+2021-01-11 16:00:09.371 INFO  [main] [ExecutorConfigurationSupport] : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-11 16:00:09.435 INFO  [task-1] [LogHelper] : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-11 16:00:09.481 INFO  [task-1] [Version] : HHH000412: Hibernate ORM core version 5.4.21.Final
+2021-01-11 16:00:09.561 INFO  [task-1] [JavaReflectionManager] : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-11 16:00:09.594 WARN  [main] [JpaBaseConfiguration$JpaWebConfiguration] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-11 16:00:09.639 INFO  [task-1] [Dialect] : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-11 16:00:10.071 INFO  [main] [DefaultSecurityFilterChain] : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b32aaca, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f7b4953, org.springframework.security.web.header.HeaderWriterFilter@27e25c2f, org.springframework.security.web.authentication.logout.LogoutFilter@5453b15d, ru.bolshakov.internship.dishes_rating.security.JwtTokenFilter@2154652c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77a27356, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46875fae, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b5afde5, org.springframework.security.web.session.SessionManagementFilter@63a833c5, org.springframework.security.web.access.ExceptionTranslationFilter@2b1f0667, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b0fc8c2]
+2021-01-11 16:00:10.198 INFO  [task-1] [JtaPlatformInitiator] : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-11 16:00:10.205 INFO  [task-1] [AbstractEntityManagerFactoryBean] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-11 16:00:10.289 INFO  [main] [DirectJDKLog] : Starting ProtocolHandler ["http-nio-8080"]
+2021-01-11 16:00:10.316 INFO  [main] [TomcatWebServer] : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-11 16:00:10.684 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
+2021-01-11 16:00:10.687 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
+2021-01-11 16:00:10.687 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
+2021-01-11 16:00:10.768 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
+2021-01-11 16:00:10.768 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: integer, dataTypeClass: class java.lang.Void
+2021-01-11 16:00:10.769 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
+2021-01-11 16:00:10.769 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: string, dataTypeClass: class java.lang.Void
+2021-01-11 16:00:10.769 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
+2021-01-11 16:00:10.769 WARN  [main] [OperationImplicitParameterReader] : Unable to interpret the implicit parameter configuration with dataType: boolean, dataTypeClass: class java.lang.Void
+2021-01-11 16:00:10.824 INFO  [main] [DeferredRepositoryInitializationListener] : Triggering deferred initialization of Spring Data repositories…
+2021-01-11 16:00:11.115 INFO  [main] [DeferredRepositoryInitializationListener] : Spring Data repositories initialized!
+2021-01-11 16:00:11.123 INFO  [main] [StartupInfoLogger] : Started DishesRatingApplication in 5.83 seconds (JVM running for 6.396)
+2021-01-11 16:00:18.711 INFO  [http-nio-8080-exec-1] [DirectJDKLog] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-11 16:00:18.711 INFO  [http-nio-8080-exec-1] [FrameworkServlet] : Initializing Servlet 'dispatcherServlet'
+2021-01-11 16:00:18.716 INFO  [http-nio-8080-exec-1] [FrameworkServlet] : Completed initialization in 5 ms
