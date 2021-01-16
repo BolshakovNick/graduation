@@ -81,6 +81,7 @@ public class VoteService {
         }
     }
 
+    @Transactional(readOnly = true)
     public VoteDTO get(Long id) {
         return mapper.toDTO(voteRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Restaurant with such ID not found")));

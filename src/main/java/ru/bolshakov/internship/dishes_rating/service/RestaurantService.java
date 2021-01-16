@@ -67,10 +67,12 @@ public class RestaurantService {
         }
     }
 
+    @Transactional(readOnly = true)
     public RestaurantDTO getRestaurantWithRatingByDate(Long id) {
         return getRestaurantWithRatingByDate(id, LocalDate.now());
     }
 
+    @Transactional(readOnly = true)
     public RestaurantDTO getRestaurantWithRatingByDate(Long id, LocalDate date) {
         Restaurant returnedRestaurant = getRestaurantEntity(id);
 
@@ -79,10 +81,12 @@ public class RestaurantService {
                 voteRepository.countByVotingDateTimeBetweenAndRestaurant_Id(date.atStartOfDay(), date.atTime(LocalTime.MAX), id).orElse(null));
     }
 
+    @Transactional(readOnly = true)
     public RestaurantDTO get(Long id) {
         return mapper.toDTO(getRestaurantEntity(id));
     }
 
+    @Transactional(readOnly = true)
     public List<RestaurantDTO> getAllWithRatingByDate(Pageable pageable, SearchRequest searchRequest) {
         return getAllWithRatingByDate(LocalDate.now(), pageable, searchRequest);
     }

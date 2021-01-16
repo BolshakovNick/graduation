@@ -78,6 +78,7 @@ public class MenuService {
         }
     }
 
+    @Transactional(readOnly = true)
     public DishDTO getDish(Long restaurantId, Long dishId) {
         Dish returnedDish = dishRepository.getById(dishId)
                 .orElseThrow(() -> new NotFoundException("Dish with such ID is not found"));

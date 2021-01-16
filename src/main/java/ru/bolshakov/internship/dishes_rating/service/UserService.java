@@ -80,15 +80,18 @@ public class UserService {
         }
     }
 
+    @Transactional(readOnly = true)
     public UserDTO get(Long id) {
         return mapper.toDTO(getUserEntity(id));
     }
 
+    @Transactional(readOnly = true)
     public UserDTO getByEmail(String email) {
         User returnedUser = repository.findByEmail(email).orElseThrow(() -> new NotFoundException("User with such email is not found"));
         return mapper.toDTO(returnedUser);
     }
 
+    @Transactional(readOnly = true)
     public List<UserDTO> getAll(Pageable pageable, SearchRequest request) {
         if (request.isEmpty()) {
             return mapper.toDTOs(repository.findAll(pageable).getContent());

@@ -14,4 +14,5 @@
     <include file="changesets/7_change_price_type.sql" relativeToChangelogFile="true"/>
     <include file="changesets/8_init_schema_token.sql" relativeToChangelogFile="true"/>
     <include file="changesets/9_add_column_to_users.sql" relativeToChangelogFile="true"/>
+    <include file="changesets/10_populate_schemas.sql" relativeToChangelogFile="true"/>
 </databaseChangeLog>
