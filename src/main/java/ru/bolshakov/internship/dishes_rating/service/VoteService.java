@@ -69,6 +69,11 @@ public class VoteService {
     @Transactional
     public void delete(Long id) {
         try {
+            LocalTime currentTime = LocalTime.now();
+            if (!isVoteChangingAvailable(LocalTime.now())) {
+                log.warn("Deleting vote is unavailable, because voting time: {} is more than {}.", currentTime, config.getBoundaryTime());
+                throw new ChangingVoteUnavailable("Voting has already closed. Current time is more than " + config.getBoundaryTime());
+            }
             voteRepository.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
             log.warn("Deleting {} failed. Possible reason: vote with id {} does not exist in database", id, id);

@@ -86,7 +86,7 @@ class RestaurantManagementControllerTest extends DishesRatingApplicationTests {
                 .contentType("application/json;charset=UTF-8")
                 .content(objectMapper.writeValueAsString(requestDTO)))
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isBadRequest());
+                .andExpect(MockMvcResultMatchers.status().isUnprocessableEntity());
     }
 
     @Test
