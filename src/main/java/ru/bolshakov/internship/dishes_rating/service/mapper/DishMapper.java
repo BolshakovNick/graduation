@@ -3,8 +3,8 @@ package ru.bolshakov.internship.dishes_rating.service.mapper;
 import org.springframework.stereotype.Component;
 import ru.bolshakov.internship.dishes_rating.dto.dish.DishDTO;
 import ru.bolshakov.internship.dishes_rating.dto.dish.DishSavingRequestDTO;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Dish;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Menu;
+import ru.bolshakov.internship.dishes_rating.model.Dish;
+import ru.bolshakov.internship.dishes_rating.model.Menu;
 import ru.bolshakov.internship.dishes_rating.service.PriceFormatter;
 
 import java.util.List;

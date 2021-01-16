@@ -17,7 +17,7 @@ import org.springframework.web.context.WebApplicationContext;
 import ru.bolshakov.internship.dishes_rating.DishesRatingApplicationTests;
 import ru.bolshakov.internship.dishes_rating.dto.ErrorResponseDTO;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantDTO;
-import ru.bolshakov.internship.dishes_rating.dto.search.RestaurantSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
 import ru.bolshakov.internship.dishes_rating.model.Role;
 import ru.bolshakov.internship.dishes_rating.security.SecurityUser;
@@ -71,7 +71,7 @@ class RestaurantViewingControllerTest extends DishesRatingApplicationTests {
                 new RestaurantDTO(3L, "name3", "description3", 300L));
 
         Mockito.when(restaurantService.getAllWithRatingByDate(PageRequest.of(0, 3),
-                new RestaurantSearchRequest()))
+                new SearchRequest()))
                 .thenReturn(restaurants);
 
         mockMvc.perform(MockMvcRequestBuilders.get("/restaurants"))
@@ -88,7 +88,7 @@ class RestaurantViewingControllerTest extends DishesRatingApplicationTests {
                 new RestaurantDTO(3L, "name3", "description3", 300L));
 
         Mockito.when(restaurantService.getAllWithRatingByDate(PageRequest.of(0, 3),
-                new RestaurantSearchRequest()))
+                new SearchRequest()))
                 .thenReturn(restaurants);
 
         mockMvc.perform(MockMvcRequestBuilders.get("/restaurants")

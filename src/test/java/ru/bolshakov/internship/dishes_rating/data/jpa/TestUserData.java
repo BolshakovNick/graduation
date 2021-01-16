@@ -1,6 +1,6 @@
 package ru.bolshakov.internship.dishes_rating.data.jpa;
 
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
+import ru.bolshakov.internship.dishes_rating.model.User;
 
 import java.util.Arrays;
 import java.util.List;

@@ -9,9 +9,9 @@ import ru.bolshakov.internship.dishes_rating.dto.dish.DishDTO;
 import ru.bolshakov.internship.dishes_rating.dto.dish.DishSavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.menu.MenuDTO;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Dish;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Menu;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Dish;
+import ru.bolshakov.internship.dishes_rating.model.Menu;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaDishRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaMenuRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaRestaurantRepository;
@@ -78,6 +78,7 @@ public class MenuService {
         }
     }
 
+    @Transactional(readOnly = true)
     public DishDTO getDish(Long restaurantId, Long dishId) {
         Dish returnedDish = dishRepository.getById(dishId)
                 .orElseThrow(() -> new NotFoundException("Dish with such ID is not found"));
@@ -87,11 +88,14 @@ public class MenuService {
         return dishMapper.toDTO(returnedDish);
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public MenuDTO getMenuByRestaurantId(Long restaurantId) {
         Menu currentMenu = getCurrentMenu(restaurantId);
-        Long price = Math.round(currentMenu.getDishes().stream().mapToLong(Dish::getPrice).average().orElse(0));
-        return menuMapper.toDTO(currentMenu, price);
+        if (currentMenu.getDishes() != null && !currentMenu.getDishes().isEmpty()) {
+            Long price = Math.round(currentMenu.getDishes().stream().mapToLong(Dish::getPrice).average().orElse(0));
+            return menuMapper.toDTO(currentMenu, price);
+        }
+        return menuMapper.toDTO(currentMenu);
     }
 
     private boolean isDishBelongsMenu(Long dishId, Menu menu) {

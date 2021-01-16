@@ -2,12 +2,12 @@ package ru.bolshakov.internship.dishes_rating.service.specification;
 
 public class SearchCriteria {
     private String key;
-    private SearchOperation operation;
+    private SearchOperationType operationType;
     private Object value;
 
-    public SearchCriteria(String key, SearchOperation operation, Object value) {
+    public SearchCriteria(String key, SearchOperationType operationType, Object value) {
         this.key = key;
-        this.operation = operation;
+        this.operationType = operationType;
         this.value = value;
     }
 
@@ -19,12 +19,12 @@ public class SearchCriteria {
         this.key = key;
     }
 
-    public SearchOperation getOperation() {
-        return operation;
+    public SearchOperationType getOperationType() {
+        return operationType;
     }
 
-    public void setOperation(SearchOperation operation) {
-        this.operation = operation;
+    public void setOperationType(SearchOperationType operationType) {
+        this.operationType = operationType;
     }
 
     public Object getValue() {

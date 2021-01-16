@@ -1,6 +1,6 @@
 package ru.bolshakov.internship.dishes_rating.data.jpa;
 
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 
 public class TestRestaurantData {
     public final Restaurant TEST_RESTAURANT_1 = new Restaurant("Restaurant1", "Some description for first restaurant");

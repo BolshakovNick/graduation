@@ -79,7 +79,7 @@ class  UserLoginControllerTest extends DishesRatingApplicationTests {
         this.mockMvc.perform(MockMvcRequestBuilders.post("/authorization/sign-up").contentType("application/json;charset=UTF-8")
                 .content(objectMapper.writeValueAsString(userWithExistentMail)))
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                .andExpect(MockMvcResultMatchers.status().isUnprocessableEntity())
                 .andExpect(MockMvcResultMatchers.content().string(objectMapper.writeValueAsString(new ErrorResponseDTO("Email must be unique"))));
     }
 
@@ -89,7 +89,7 @@ class  UserLoginControllerTest extends DishesRatingApplicationTests {
         this.mockMvc.perform(MockMvcRequestBuilders.post("/authorization/sign-up").contentType("application/json;charset=UTF-8")
                 .content(objectMapper.writeValueAsString(userWithInvalidName)))
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                .andExpect(MockMvcResultMatchers.status().isUnprocessableEntity())
                 .andExpect(MockMvcResultMatchers.content().string(objectMapper.writeValueAsString(
                         new ErrorResponseDTO(Collections.singletonList(new FieldErrorDTO("userName", "size must be between 5 and 50"))))));
     }
@@ -100,7 +100,7 @@ class  UserLoginControllerTest extends DishesRatingApplicationTests {
         this.mockMvc.perform(MockMvcRequestBuilders.post("/authorization/sign-up").contentType("application/json;charset=UTF-8")
                 .content(objectMapper.writeValueAsString(userWithInvalidName)))
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                .andExpect(MockMvcResultMatchers.status().isUnprocessableEntity())
                 .andExpect(MockMvcResultMatchers.content().string(objectMapper.writeValueAsString(
                         new ErrorResponseDTO(Collections.singletonList(new FieldErrorDTO("userName", "size must be between 5 and 50"))))));
     }
@@ -111,7 +111,7 @@ class  UserLoginControllerTest extends DishesRatingApplicationTests {
         this.mockMvc.perform(MockMvcRequestBuilders.post("/authorization/sign-up").contentType("application/json;charset=UTF-8")
                 .content(objectMapper.writeValueAsString(userWithInvalidEmail)))
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                .andExpect(MockMvcResultMatchers.status().isUnprocessableEntity())
                 .andExpect(MockMvcResultMatchers.content().string(objectMapper.writeValueAsString(
                         (new ErrorResponseDTO(Collections.singletonList(new FieldErrorDTO("email", "must be a well-formed email address")))))));
     }
@@ -122,7 +122,7 @@ class  UserLoginControllerTest extends DishesRatingApplicationTests {
         this.mockMvc.perform(MockMvcRequestBuilders.post("/authorization/sign-up").contentType("application/json;charset=UTF-8")
                 .content(objectMapper.writeValueAsString(userWithInvalidPassword)))
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                .andExpect(MockMvcResultMatchers.status().isUnprocessableEntity())
                 .andExpect(MockMvcResultMatchers.content().string(objectMapper.writeValueAsString(
                         new ErrorResponseDTO(Collections.singletonList(new FieldErrorDTO("password", "size must be between 8 and 50"))))));
     }

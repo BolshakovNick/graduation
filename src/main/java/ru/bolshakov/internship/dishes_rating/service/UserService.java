@@ -6,14 +6,14 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.bolshakov.internship.dishes_rating.dto.search.UserSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.dto.user.SavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UpdatingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserSavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.exception.NonUniqueParamException;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
+import ru.bolshakov.internship.dishes_rating.model.User;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaUserRepository;
 import ru.bolshakov.internship.dishes_rating.service.mapper.UserMapper;
 import ru.bolshakov.internship.dishes_rating.service.specification.builder.UserSpecificationBuilder;
@@ -80,17 +80,20 @@ public class UserService {
         }
     }
 
+    @Transactional(readOnly = true)
     public UserDTO get(Long id) {
         return mapper.toDTO(getUserEntity(id));
     }
 
+    @Transactional(readOnly = true)
     public UserDTO getByEmail(String email) {
         User returnedUser = repository.findByEmail(email).orElseThrow(() -> new NotFoundException("User with such email is not found"));
         return mapper.toDTO(returnedUser);
     }
 
-    public List<UserDTO> getAll(Pageable pageable, UserSearchRequest request) {
-        if (request.getUserName() == null) {
+    @Transactional(readOnly = true)
+    public List<UserDTO> getAll(Pageable pageable, SearchRequest request) {
+        if (request.isEmpty()) {
             return mapper.toDTOs(repository.findAll(pageable).getContent());
         } else {
             UserSpecificationBuilder builder = new UserSpecificationBuilder();

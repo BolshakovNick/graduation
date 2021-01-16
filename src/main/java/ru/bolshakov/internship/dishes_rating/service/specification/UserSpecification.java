@@ -2,7 +2,7 @@ package ru.bolshakov.internship.dishes_rating.service.specification;
 
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.lang.NonNull;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
+import ru.bolshakov.internship.dishes_rating.model.User;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;

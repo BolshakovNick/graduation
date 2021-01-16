@@ -13,12 +13,12 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantDTO;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantSavingRequestDTO;
-import ru.bolshakov.internship.dishes_rating.dto.search.RestaurantSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
 import ru.bolshakov.internship.dishes_rating.model.Role;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Vote;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.User;
+import ru.bolshakov.internship.dishes_rating.model.Vote;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaRestaurantRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaVoteRepository;
 import ru.bolshakov.internship.dishes_rating.service.mapper.RestaurantMapper;
@@ -172,7 +172,7 @@ class RestaurantServiceTest {
 
         List<RestaurantDTO> restaurantsWithRating = service.getAllWithRatingByDate(
                 LocalDate.now(), pageRequest,
-                new RestaurantSearchRequest()
+                new SearchRequest()
         );
 
         for(int i = 0; i < (restaurantsWithRating.size() - 1); i++) {

@@ -12,9 +12,9 @@ import ru.bolshakov.internship.dishes_rating.dto.vote.VoteDTO;
 import ru.bolshakov.internship.dishes_rating.exception.ChangingVoteUnavailable;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
 import ru.bolshakov.internship.dishes_rating.model.Role;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Vote;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.User;
+import ru.bolshakov.internship.dishes_rating.model.Vote;
 import ru.bolshakov.internship.dishes_rating.properties.VotingProperties;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaRestaurantRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaUserRepository;
@@ -120,6 +120,7 @@ class VoteServiceTest {
     void delete() {
         Mockito.doNothing().when(repository).deleteById(EXISTENT_VOTE.getId());
         Mockito.when(repository.findById(EXISTENT_VOTE.getId())).thenReturn(Optional.empty());
+        Mockito.when(properties.getBoundaryTime()).thenReturn(LocalTime.now().plus(1, ChronoUnit.MINUTES));
 
         assertDoesNotThrow(() -> service.delete(EXISTENT_VOTE.getId()));
         assertThrows(NotFoundException.class, () -> service.get(EXISTENT_VOTE.getId()));
@@ -128,6 +129,7 @@ class VoteServiceTest {
     @Test
     void deleteIfRestaurantDoesNotExist() {
         Mockito.doThrow(EmptyResultDataAccessException.class).when(repository).deleteById(NON_EXISTENT_VOTE_ID);
+        Mockito.when(properties.getBoundaryTime()).thenReturn(LocalTime.now().plus(1, ChronoUnit.MINUTES));
         assertThrows(NotFoundException.class, () -> service.delete(NON_EXISTENT_VOTE_ID));
     }
 

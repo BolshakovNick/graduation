@@ -9,7 +9,7 @@ import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
-import ru.bolshakov.internship.dishes_rating.dto.search.UserSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.dto.user.AuthorizationRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UpdatingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserDTO;
@@ -17,9 +17,10 @@ import ru.bolshakov.internship.dishes_rating.dto.user.UserSavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.exception.NonUniqueParamException;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
 import ru.bolshakov.internship.dishes_rating.model.Role;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
+import ru.bolshakov.internship.dishes_rating.model.User;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaUserRepository;
 import ru.bolshakov.internship.dishes_rating.service.mapper.UserMapper;
+import ru.bolshakov.internship.dishes_rating.service.specification.SearchOperationType;
 import ru.bolshakov.internship.dishes_rating.service.specification.UserSpecification;
 
 import java.util.*;
@@ -153,7 +154,7 @@ class UserServiceTest {
 
         Mockito.when(repository.findAll(pageRequest)).thenReturn(new PageImpl<>(EXISTENT_USERS));
 
-        List<UserDTO> users = service.getAll(pageRequest, new UserSearchRequest());
+        List<UserDTO> users = service.getAll(pageRequest, new SearchRequest());
         assertEquals(3, users.size());
 
         for (int i = 0; i < users.size(); i++) {
@@ -163,13 +164,15 @@ class UserServiceTest {
 
     @Test
     void getAllFilteredByLike() {
-        UserSearchRequest userSearchRequest = new UserSearchRequest();
-        userSearchRequest.setUserName(EXISTENT_USER.getUserName());
+        SearchRequest searchRequest = new SearchRequest("userName", EXISTENT_USER.getUserName(), SearchOperationType.LIKE);
+        searchRequest.setParameter("userName");
+        searchRequest.setValue(EXISTENT_USER.getUserName());
+        searchRequest.setOperator(SearchOperationType.LIKE);
 
         Mockito.when(repository.findAll(Mockito.any(UserSpecification.class), Mockito.any(PageRequest.class)))
                 .thenReturn(new PageImpl<>(Collections.singletonList(EXISTENT_USER)));
 
-        List<UserDTO> users = service.getAll(PageRequest.of(0, 3), userSearchRequest);
+        List<UserDTO> users = service.getAll(PageRequest.of(0, 3), searchRequest);
         assertEquals(1, users.size());
 
         assertEquals(EXISTENT_USER.getEmail(), users.get(0).getEmail());
@@ -177,14 +180,12 @@ class UserServiceTest {
 
     @Test
     void getAllFilteredByStartWith() {
-        UserSearchRequest userSearchRequest = new UserSearchRequest();
-        userSearchRequest.setUserName("user");
-        userSearchRequest.setStartWith(true);
+        SearchRequest searchRequest = new SearchRequest("userName", "user", SearchOperationType.STARTS);
 
         Mockito.when(repository.findAll(Mockito.any(UserSpecification.class), Mockito.any(PageRequest.class)))
                 .thenReturn(new PageImpl<>(EXISTENT_USERS));
 
-        List<UserDTO> users = service.getAll(PageRequest.of(0, 3), userSearchRequest);
+        List<UserDTO> users = service.getAll(PageRequest.of(0, 3), searchRequest);
         assertEquals(3, users.size());
 
         for (int i = 0; i < users.size(); i++) {
@@ -194,14 +195,14 @@ class UserServiceTest {
 
     @Test
     void getAllFilteredByEndWith() {
-        UserSearchRequest userSearchRequest = new UserSearchRequest();
-        userSearchRequest.setUserName("1");
-        userSearchRequest.setEndWith(true);
+        SearchRequest searchRequest = new SearchRequest("userName", "1", SearchOperationType.ENDS);
+        searchRequest.setParameter("userName");
+        searchRequest.setValue("1");
 
         Mockito.when(repository.findAll(Mockito.any(UserSpecification.class), Mockito.any(PageRequest.class)))
                 .thenReturn(new PageImpl<>(Collections.singletonList(EXISTENT_USER)));
 
-        List<UserDTO> users = service.getAll(PageRequest.of(0, 3), userSearchRequest);
+        List<UserDTO> users = service.getAll(PageRequest.of(0, 3), searchRequest);
         assertEquals(1, users.size());
 
         assertEquals(EXISTENT_USER.getEmail(), users.get(0).getEmail());

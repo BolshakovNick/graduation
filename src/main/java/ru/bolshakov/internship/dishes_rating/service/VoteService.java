@@ -8,9 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.bolshakov.internship.dishes_rating.dto.vote.VoteDTO;
 import ru.bolshakov.internship.dishes_rating.exception.ChangingVoteUnavailable;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Vote;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.User;
+import ru.bolshakov.internship.dishes_rating.model.Vote;
 import ru.bolshakov.internship.dishes_rating.properties.VotingProperties;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaRestaurantRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaUserRepository;
@@ -69,6 +69,11 @@ public class VoteService {
     @Transactional
     public void delete(Long id) {
         try {
+            LocalTime currentTime = LocalTime.now();
+            if (!isVoteChangingAvailable(LocalTime.now())) {
+                log.warn("Deleting vote is unavailable, because voting time: {} is more than {}.", currentTime, config.getBoundaryTime());
+                throw new ChangingVoteUnavailable("Voting has already closed. Current time is more than " + config.getBoundaryTime());
+            }
             voteRepository.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
             log.warn("Deleting {} failed. Possible reason: vote with id {} does not exist in database", id, id);
@@ -76,6 +81,7 @@ public class VoteService {
         }
     }
 
+    @Transactional(readOnly = true)
     public VoteDTO get(Long id) {
         return mapper.toDTO(voteRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Restaurant with such ID not found")));

@@ -2,7 +2,7 @@ package ru.bolshakov.internship.dishes_rating.service.mapper;
 
 import org.junit.jupiter.api.Test;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantDTO;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 
 import java.util.Arrays;
 import java.util.List;

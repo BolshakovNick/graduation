@@ -2,7 +2,7 @@ package ru.bolshakov.internship.dishes_rating.service.mapper;
 
 import org.springframework.stereotype.Component;
 import ru.bolshakov.internship.dishes_rating.dto.menu.MenuDTO;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Menu;
+import ru.bolshakov.internship.dishes_rating.model.Menu;
 import ru.bolshakov.internship.dishes_rating.service.PriceFormatter;
 
 import java.util.stream.Collectors;
@@ -15,13 +15,18 @@ public class MenuMapper {
         this.dishMapper = dishMapper;
     }
 
+    public MenuDTO toDTO(Menu menu) {
+        return toDTO(menu, null);
+    }
+
     public MenuDTO toDTO(Menu menu, Long averagePrice) {
         return new MenuDTO(
                 menu.getMenuDate(),
                 menu.getRestaurant().getId(),
                 averagePrice,
-                PriceFormatter.doPriceFormatting(averagePrice),
-                menu.getDishes().stream().map(dishMapper::toDTO).collect(Collectors.toList())
+                averagePrice == null ? null : PriceFormatter.doPriceFormatting(averagePrice),
+                menu.getDishes() == null ? null
+                        : menu.getDishes().stream().map(dishMapper::toDTO).collect(Collectors.toList())
         );
     }
 }

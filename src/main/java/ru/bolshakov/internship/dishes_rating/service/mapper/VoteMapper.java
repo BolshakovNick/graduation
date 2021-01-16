@@ -5,9 +5,9 @@ import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserDTO;
 import ru.bolshakov.internship.dishes_rating.dto.vote.VoteDTO;
 import ru.bolshakov.internship.dishes_rating.model.Role;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Vote;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.User;
+import ru.bolshakov.internship.dishes_rating.model.Vote;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

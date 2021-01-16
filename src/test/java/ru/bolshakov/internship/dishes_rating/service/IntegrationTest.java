@@ -15,15 +15,15 @@ import ru.bolshakov.internship.dishes_rating.dto.dish.DishSavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.menu.MenuDTO;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantDTO;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantSavingRequestDTO;
-import ru.bolshakov.internship.dishes_rating.dto.search.RestaurantSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.dto.user.AuthorizationRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserSavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.exception.AuthorizationFailureException;
 import ru.bolshakov.internship.dishes_rating.exception.ChangingVoteUnavailable;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
-import ru.bolshakov.internship.dishes_rating.model.jpa.VerificationToken;
+import ru.bolshakov.internship.dishes_rating.model.User;
+import ru.bolshakov.internship.dishes_rating.model.VerificationToken;
 import ru.bolshakov.internship.dishes_rating.properties.VotingProperties;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaRestaurantRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaUserRepository;
@@ -147,7 +147,7 @@ public class IntegrationTest {
         Mockito.when(votingProperties.getBoundaryTime()).thenReturn(LocalTime.MAX);
 
         List<RestaurantDTO> allWithRatingBeforeVoting = restaurantService.getAllWithRatingByDate(PageRequest.of(0, 3),
-                new RestaurantSearchRequest());
+                new SearchRequest());
 
         assertEquals(3, allWithRatingBeforeVoting.size());
         allWithRatingBeforeVoting.forEach(restaurantDTO -> assertNull(restaurantDTO.getRating()));
@@ -159,7 +159,7 @@ public class IntegrationTest {
         );
 
         List<RestaurantDTO> allWithRatingAfterVoting = restaurantService.getAllWithRatingByDate(PageRequest.of(0, 3),
-                new RestaurantSearchRequest());
+                new SearchRequest());
 
         assertEquals(2L, allWithRatingAfterVoting.get(0).getRating());
         assertEquals(1L, allWithRatingAfterVoting.get(1).getRating());
@@ -168,7 +168,7 @@ public class IntegrationTest {
         assertDoesNotThrow(() -> voteService.vote(user1.getId(), restaurant3.getId()));
 
         List<RestaurantDTO> allWithRatingAfterChangingVote = restaurantService.getAllWithRatingByDate(PageRequest.of(0, 3),
-                new RestaurantSearchRequest());
+                new SearchRequest());
 
         assertEquals(1L, allWithRatingAfterChangingVote.get(0).getRating());
         assertEquals(1L, allWithRatingAfterChangingVote.get(1).getRating());
@@ -180,7 +180,7 @@ public class IntegrationTest {
         Mockito.when(votingProperties.getBoundaryTime()).thenReturn(LocalTime.MIN);
 
         List<RestaurantDTO> allWithRatingBeforeVoting = restaurantService.getAllWithRatingByDate(PageRequest.of(0, 3),
-                new RestaurantSearchRequest());
+                new SearchRequest());
 
         assertEquals(3, allWithRatingBeforeVoting.size());
         allWithRatingBeforeVoting.forEach(restaurantDTO -> assertNull(restaurantDTO.getRating()));

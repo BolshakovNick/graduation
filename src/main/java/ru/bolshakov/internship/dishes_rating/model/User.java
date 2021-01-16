@@ -1,6 +1,4 @@
-package ru.bolshakov.internship.dishes_rating.model.jpa;
-
-import ru.bolshakov.internship.dishes_rating.model.Role;
+package ru.bolshakov.internship.dishes_rating.model;
 
 import javax.persistence.*;
 import java.util.Objects;

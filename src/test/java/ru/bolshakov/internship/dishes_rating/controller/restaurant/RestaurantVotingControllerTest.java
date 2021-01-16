@@ -112,7 +112,7 @@ class RestaurantVotingControllerTest extends DishesRatingApplicationTests {
         mockMvc.perform(MockMvcRequestBuilders.post("/restaurants/50/vote")
                 .param("id", userId.toString()))
                 .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                .andExpect(MockMvcResultMatchers.status().isUnprocessableEntity())
                 .andExpect(MockMvcResultMatchers.content().string(objectMapper.writeValueAsString(new ErrorResponseDTO())));
     }
 }

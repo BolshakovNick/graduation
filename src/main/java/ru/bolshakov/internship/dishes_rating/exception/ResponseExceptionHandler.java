@@ -46,7 +46,7 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(ChangingVoteUnavailable.class)
     public ResponseEntity<Object> handleChangingVoteUnavailable(ChangingVoteUnavailable ex, WebRequest webRequest) {
         log.error("ChangingVoteUnavailable handling started. ", ex);
-        return handleExceptionInternal(ex, new ErrorResponseDTO(ex.getMessage()), new HttpHeaders(), HttpStatus.BAD_REQUEST, webRequest);
+        return handleExceptionInternal(ex, new ErrorResponseDTO(ex.getMessage()), new HttpHeaders(), HttpStatus.UNPROCESSABLE_ENTITY, webRequest);
     }
 
     @ExceptionHandler(AccessDeniedException.class)
@@ -55,10 +55,16 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, new ErrorResponseDTO("Access denied"), new HttpHeaders(), HttpStatus.FORBIDDEN, webRequest);
     }
 
+    @ExceptionHandler(BadParameterException.class)
+    public ResponseEntity<Object> handleBadParameter(BadParameterException ex, WebRequest webRequest) {
+        log.error("BadParameterException handling started. ", ex);
+        return handleExceptionInternal(ex, new ErrorResponseDTO(ex.getMessage()), new HttpHeaders(), HttpStatus.UNPROCESSABLE_ENTITY, webRequest);
+    }
+
     @ExceptionHandler(NonUniqueParamException.class)
     public ResponseEntity<Object> handleNonUniqueParam(NonUniqueParamException ex, WebRequest webRequest) {
         log.error("NonUniqueParamException handling started. ", ex);
-        return handleExceptionInternal(ex, new ErrorResponseDTO(ex.getMessage()), new HttpHeaders(), HttpStatus.BAD_REQUEST, webRequest);
+        return handleExceptionInternal(ex, new ErrorResponseDTO(ex.getMessage()), new HttpHeaders(), HttpStatus.UNPROCESSABLE_ENTITY, webRequest);
     }
 
     @Override
@@ -67,7 +73,7 @@ public class ResponseExceptionHandler extends ResponseEntityExceptionHandler {
         List<FieldErrorDTO> fieldErrors = ex.getBindingResult().getFieldErrors().stream()
                 .map(fieldError -> new FieldErrorDTO(fieldError.getField(), messageSource.getMessage(fieldError, Locale.getDefault())))
                 .collect(Collectors.toList());
-        return handleExceptionInternal(ex, new ErrorResponseDTO(fieldErrors), new HttpHeaders(), HttpStatus.BAD_REQUEST, webRequest);
+        return handleExceptionInternal(ex, new ErrorResponseDTO(fieldErrors), new HttpHeaders(), HttpStatus.UNPROCESSABLE_ENTITY, webRequest);
     }
 
     @ExceptionHandler(Exception.class)

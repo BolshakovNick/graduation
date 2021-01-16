@@ -18,7 +18,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import ru.bolshakov.internship.dishes_rating.DishesRatingApplicationTests;
-import ru.bolshakov.internship.dishes_rating.dto.search.UserSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.dto.user.UpdatingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserDTO;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
@@ -73,7 +73,7 @@ class UserManagementControllerTest extends DishesRatingApplicationTests {
 
         List<UserDTO> users = Arrays.asList(userDTO1, userDTO2, userDTO3);
 
-        Mockito.when(service.getAll(PageRequest.of(0, 3), new UserSearchRequest())).thenReturn(users);
+        Mockito.when(service.getAll(PageRequest.of(0, 3), new SearchRequest())).thenReturn(users);
 
         this.mockMvc.perform(MockMvcRequestBuilders.get("/users"))
                 .andDo(MockMvcResultHandlers.print())
@@ -89,7 +89,7 @@ class UserManagementControllerTest extends DishesRatingApplicationTests {
 
         List<UserDTO> users = Arrays.asList(userDTO1, userDTO2, userDTO3);
 
-        Mockito.when(service.getAll(PageRequest.of(0, 3), new UserSearchRequest())).thenReturn(users);
+        Mockito.when(service.getAll(PageRequest.of(0, 3), new SearchRequest())).thenReturn(users);
 
         this.mockMvc.perform(MockMvcRequestBuilders.get("/users")
                 .param("size", "15"))

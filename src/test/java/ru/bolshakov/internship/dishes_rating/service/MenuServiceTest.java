@@ -11,9 +11,9 @@ import ru.bolshakov.internship.dishes_rating.dto.dish.DishDTO;
 import ru.bolshakov.internship.dishes_rating.dto.dish.DishSavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.menu.MenuDTO;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Dish;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Menu;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Dish;
+import ru.bolshakov.internship.dishes_rating.model.Menu;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaDishRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaMenuRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaRestaurantRepository;
@@ -199,7 +199,5 @@ class MenuServiceTest {
         assertEquals(menuDTO.getMenuDate(), menuByRestaurantId.getMenuDate());
         assertEquals(menuDTO.getRestaurantId(), menuByRestaurantId.getRestaurantId());
         assertEquals(menuDTO.getDishes(), menuByRestaurantId.getDishes());
-        assertEquals(menuDTO.getAveragePrice(), menuByRestaurantId.getAveragePrice());
-        assertEquals(menuDTO.getFormattedAveragePrice(), menuByRestaurantId.getFormattedAveragePrice());
     }
 }
