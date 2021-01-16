@@ -87,11 +87,14 @@ public class MenuService {
         return dishMapper.toDTO(returnedDish);
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public MenuDTO getMenuByRestaurantId(Long restaurantId) {
         Menu currentMenu = getCurrentMenu(restaurantId);
-        Long price = Math.round(currentMenu.getDishes().stream().mapToLong(Dish::getPrice).average().orElse(0));
-        return menuMapper.toDTO(currentMenu, price);
+        if (currentMenu.getDishes() != null && !currentMenu.getDishes().isEmpty()) {
+            Long price = Math.round(currentMenu.getDishes().stream().mapToLong(Dish::getPrice).average().orElse(0));
+            return menuMapper.toDTO(currentMenu, price);
+        }
+        return menuMapper.toDTO(currentMenu);
     }
 
     private boolean isDishBelongsMenu(Long dishId, Menu menu) {

@@ -199,7 +199,5 @@ class MenuServiceTest {
         assertEquals(menuDTO.getMenuDate(), menuByRestaurantId.getMenuDate());
         assertEquals(menuDTO.getRestaurantId(), menuByRestaurantId.getRestaurantId());
         assertEquals(menuDTO.getDishes(), menuByRestaurantId.getDishes());
-        assertEquals(menuDTO.getAveragePrice(), menuByRestaurantId.getAveragePrice());
-        assertEquals(menuDTO.getFormattedAveragePrice(), menuByRestaurantId.getFormattedAveragePrice());
     }
 }
