@@ -1,25 +1,12 @@
 package ru.bolshakov.internship.dishes_rating.service.specification.builder;
 
 import ru.bolshakov.internship.dishes_rating.service.specification.SearchCriteria;
-import ru.bolshakov.internship.dishes_rating.service.specification.SearchOperation;
-
-import java.util.ArrayList;
-import java.util.List;
+import ru.bolshakov.internship.dishes_rating.service.specification.SearchOperationType;
 
 public abstract class SpecificationBuilder {
-    protected final List<SearchCriteria> searchCriteria = new ArrayList<>();
+    protected SearchCriteria searchCriteria;
 
-    protected void addCriteria(String key, String value, boolean startWith, boolean endWith) {
-        SearchOperation searchOperation;
-        if (startWith && endWith) {
-            searchOperation = SearchOperation.CONTAINS;
-        } else if (endWith) {
-            searchOperation = SearchOperation.ENDS_WITH;
-        } else if (startWith) {
-            searchOperation = SearchOperation.STARTS_WITH;
-        } else {
-            searchOperation = SearchOperation.LIKE;
-        }
-        searchCriteria.add(new SearchCriteria(key, searchOperation, value));
+    protected void setCriteria(String key, String value, SearchOperationType operator) {
+        searchCriteria = new SearchCriteria(key, operator, value);
     }
 }

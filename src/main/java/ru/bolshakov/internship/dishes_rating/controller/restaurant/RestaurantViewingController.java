@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantDTO;
-import ru.bolshakov.internship.dishes_rating.dto.search.RestaurantSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.service.RestaurantService;
 
 import java.util.List;
@@ -37,8 +37,8 @@ public class RestaurantViewingController {
                             "Multiple sort criteria are supported.")})
     @GetMapping
     public ResponseEntity<List<RestaurantDTO>> getAll(Pageable pageable,
-                                                      RestaurantSearchRequest restaurantSearchRequest) {
-        List<RestaurantDTO> returnedRestaurants = restaurantService.getAllWithRatingByDate(pageable, restaurantSearchRequest);
+                                                      SearchRequest searchRequest) {
+        List<RestaurantDTO> returnedRestaurants = restaurantService.getAllWithRatingByDate(pageable, searchRequest);
         return ResponseEntity.ok(returnedRestaurants);
     }
 

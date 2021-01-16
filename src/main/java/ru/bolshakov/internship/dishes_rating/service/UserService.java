@@ -6,7 +6,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.bolshakov.internship.dishes_rating.dto.search.UserSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.dto.user.SavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UpdatingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserDTO;
@@ -89,8 +89,8 @@ public class UserService {
         return mapper.toDTO(returnedUser);
     }
 
-    public List<UserDTO> getAll(Pageable pageable, UserSearchRequest request) {
-        if (request.getUserName() == null) {
+    public List<UserDTO> getAll(Pageable pageable, SearchRequest request) {
+        if (request.isEmpty()) {
             return mapper.toDTOs(repository.findAll(pageable).getContent());
         } else {
             UserSpecificationBuilder builder = new UserSpecificationBuilder();

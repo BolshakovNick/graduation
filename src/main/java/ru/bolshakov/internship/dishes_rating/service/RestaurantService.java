@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantDTO;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantSavingRequestDTO;
-import ru.bolshakov.internship.dishes_rating.dto.search.RestaurantSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.exception.NonUniqueParamException;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
 import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
@@ -83,20 +83,18 @@ public class RestaurantService {
         return mapper.toDTO(getRestaurantEntity(id));
     }
 
-    public List<RestaurantDTO> getAllWithRatingByDate(Pageable pageable, RestaurantSearchRequest restaurantSearchRequest) {
-        return getAllWithRatingByDate(LocalDate.now(), pageable, restaurantSearchRequest);
+    public List<RestaurantDTO> getAllWithRatingByDate(Pageable pageable, SearchRequest searchRequest) {
+        return getAllWithRatingByDate(LocalDate.now(), pageable, searchRequest);
     }
 
-    public List<RestaurantDTO> getAllWithRatingByDate(LocalDate date, Pageable pageable, RestaurantSearchRequest restaurantSearchRequest) {
+    public List<RestaurantDTO> getAllWithRatingByDate(LocalDate date, Pageable pageable, SearchRequest searchRequest) {
         Map<Long, Long> ratingByRestaurant = voteRepository.findAllByVotingDateTimeBetween(date.atStartOfDay(), date.atTime(LocalTime.MAX))
                 .stream()
                 .collect(Collectors.groupingBy(vote -> vote.getRestaurant().getId(), Collectors.counting()));
-        if (restaurantSearchRequest.getRestaurantName() == null && restaurantSearchRequest.getDescription() == null) {
+        if (searchRequest.isEmpty()) {
             return mapper.toDTOs(restaurantRepository.findAll(pageable).getContent(), ratingByRestaurant);
         } else {
-            return mapper.toDTOs(restaurantRepository
-                    .findAll(new RestaurantSpecificationBuilder()
-                            .build(restaurantSearchRequest), pageable).getContent(), ratingByRestaurant);
+            return mapper.toDTOs(findAllBySpecification(pageable, searchRequest));
         }
     }
 
@@ -112,5 +110,11 @@ public class RestaurantService {
     private Restaurant getRestaurantEntity(Long id) {
         return restaurantRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Restaurant with such ID not found"));
+    }
+
+    private List<Restaurant> findAllBySpecification(Pageable pageable, SearchRequest searchRequest) {
+        return restaurantRepository
+                .findAll(new RestaurantSpecificationBuilder()
+                        .build(searchRequest), pageable).getContent();
     }
 }

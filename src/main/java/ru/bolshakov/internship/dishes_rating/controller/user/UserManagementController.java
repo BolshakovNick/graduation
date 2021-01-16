@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.bolshakov.internship.dishes_rating.dto.search.UserSearchRequest;
+import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.dto.user.UpdatingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserDTO;
 import ru.bolshakov.internship.dishes_rating.service.UserService;
@@ -46,7 +46,7 @@ public class UserManagementController {
                     value = "If parameter is a part with which userName ends")
     })
     @GetMapping
-    public ResponseEntity<List<UserDTO>> getAllUsers(Pageable pageable, UserSearchRequest request) {
+    public ResponseEntity<List<UserDTO>> getAllUsers(Pageable pageable, SearchRequest request) {
         return ResponseEntity.ok(service.getAll(pageable, request));
     }
 
