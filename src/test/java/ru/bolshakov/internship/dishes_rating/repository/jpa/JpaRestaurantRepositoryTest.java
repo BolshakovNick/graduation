@@ -11,7 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.jdbc.Sql;
 import ru.bolshakov.internship.dishes_rating.data.jpa.TestRestaurantData;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 
 import java.util.List;
 import java.util.Optional;

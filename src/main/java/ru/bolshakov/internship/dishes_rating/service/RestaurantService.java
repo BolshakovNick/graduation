@@ -11,7 +11,7 @@ import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantSavingRequ
 import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
 import ru.bolshakov.internship.dishes_rating.exception.NonUniqueParamException;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaRestaurantRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaVoteRepository;
 import ru.bolshakov.internship.dishes_rating.service.mapper.RestaurantMapper;

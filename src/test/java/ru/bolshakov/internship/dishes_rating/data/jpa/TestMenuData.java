@@ -1,7 +1,7 @@
 package ru.bolshakov.internship.dishes_rating.data.jpa;
 
-import ru.bolshakov.internship.dishes_rating.model.jpa.Menu;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Menu;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 
 import java.time.LocalDate;
 

@@ -8,7 +8,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.jdbc.Sql;
 import ru.bolshakov.internship.dishes_rating.data.jpa.TestVoteData;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Vote;
+import ru.bolshakov.internship.dishes_rating.model.Vote;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

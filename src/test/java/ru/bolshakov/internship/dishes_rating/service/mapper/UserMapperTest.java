@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import ru.bolshakov.internship.dishes_rating.data.jpa.TestUserData;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserSavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserDTO;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
+import ru.bolshakov.internship.dishes_rating.model.User;
 
 import java.util.Arrays;
 import java.util.List;

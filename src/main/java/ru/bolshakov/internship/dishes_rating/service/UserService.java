@@ -13,7 +13,7 @@ import ru.bolshakov.internship.dishes_rating.dto.user.UserDTO;
 import ru.bolshakov.internship.dishes_rating.dto.user.UserSavingRequestDTO;
 import ru.bolshakov.internship.dishes_rating.exception.NonUniqueParamException;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
+import ru.bolshakov.internship.dishes_rating.model.User;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaUserRepository;
 import ru.bolshakov.internship.dishes_rating.service.mapper.UserMapper;
 import ru.bolshakov.internship.dishes_rating.service.specification.builder.UserSpecificationBuilder;

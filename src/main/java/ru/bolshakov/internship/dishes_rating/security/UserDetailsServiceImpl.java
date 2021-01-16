@@ -4,7 +4,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
+import ru.bolshakov.internship.dishes_rating.model.User;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaUserRepository;
 
 @Service

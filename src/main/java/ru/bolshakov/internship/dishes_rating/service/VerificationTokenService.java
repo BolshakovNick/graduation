@@ -6,8 +6,8 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.bolshakov.internship.dishes_rating.exception.NotFoundException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
-import ru.bolshakov.internship.dishes_rating.model.jpa.VerificationToken;
+import ru.bolshakov.internship.dishes_rating.model.User;
+import ru.bolshakov.internship.dishes_rating.model.VerificationToken;
 import ru.bolshakov.internship.dishes_rating.properties.VerificationProperties;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaVerificationTokenRepository;
 

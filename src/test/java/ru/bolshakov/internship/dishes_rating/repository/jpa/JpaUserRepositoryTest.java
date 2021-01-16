@@ -11,7 +11,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.jdbc.Sql;
 import ru.bolshakov.internship.dishes_rating.data.jpa.TestUserData;
 import ru.bolshakov.internship.dishes_rating.model.Role;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
+import ru.bolshakov.internship.dishes_rating.model.User;
 
 import java.util.List;
 import java.util.Optional;

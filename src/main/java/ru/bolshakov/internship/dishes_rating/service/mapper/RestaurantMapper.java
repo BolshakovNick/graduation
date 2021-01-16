@@ -3,7 +3,7 @@ package ru.bolshakov.internship.dishes_rating.service.mapper;
 import org.springframework.stereotype.Component;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantDTO;
 import ru.bolshakov.internship.dishes_rating.dto.restaurant.RestaurantSavingRequestDTO;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 
 import java.util.List;
 import java.util.Map;

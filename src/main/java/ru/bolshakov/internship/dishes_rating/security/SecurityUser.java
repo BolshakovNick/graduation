@@ -4,7 +4,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.util.Assert;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
+import ru.bolshakov.internship.dishes_rating.model.User;
 
 import java.util.ArrayList;
 import java.util.Collection;

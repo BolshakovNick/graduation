@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 import ru.bolshakov.internship.dishes_rating.model.Role;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
-import ru.bolshakov.internship.dishes_rating.model.jpa.VerificationToken;
+import ru.bolshakov.internship.dishes_rating.model.User;
+import ru.bolshakov.internship.dishes_rating.model.VerificationToken;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;

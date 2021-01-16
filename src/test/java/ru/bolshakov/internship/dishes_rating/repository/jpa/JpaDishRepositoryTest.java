@@ -8,9 +8,9 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.jdbc.Sql;
 import ru.bolshakov.internship.dishes_rating.data.jpa.TestDishData;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Dish;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Menu;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Dish;
+import ru.bolshakov.internship.dishes_rating.model.Menu;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 
 import java.time.LocalDate;
 import java.util.List;

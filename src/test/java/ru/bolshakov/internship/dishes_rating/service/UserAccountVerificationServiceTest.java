@@ -8,8 +8,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import ru.bolshakov.internship.dishes_rating.exception.TokenExpiredException;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
-import ru.bolshakov.internship.dishes_rating.model.jpa.VerificationToken;
+import ru.bolshakov.internship.dishes_rating.model.User;
+import ru.bolshakov.internship.dishes_rating.model.VerificationToken;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaUserRepository;
 import ru.bolshakov.internship.dishes_rating.repository.jpa.JpaVerificationTokenRepository;
 

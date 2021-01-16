@@ -2,7 +2,7 @@ package ru.bolshakov.internship.dishes_rating.service.specification.builder;
 
 import org.springframework.data.jpa.domain.Specification;
 import ru.bolshakov.internship.dishes_rating.dto.search.SearchRequest;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
 import ru.bolshakov.internship.dishes_rating.service.specification.RestaurantSpecification;
 
 public class RestaurantSpecificationBuilder extends SpecificationBuilder {

@@ -2,7 +2,7 @@ package ru.bolshakov.internship.dishes_rating.service.mapper;
 
 import org.springframework.stereotype.Component;
 import ru.bolshakov.internship.dishes_rating.dto.menu.MenuDTO;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Menu;
+import ru.bolshakov.internship.dishes_rating.model.Menu;
 import ru.bolshakov.internship.dishes_rating.service.PriceFormatter;
 
 import java.util.stream.Collectors;

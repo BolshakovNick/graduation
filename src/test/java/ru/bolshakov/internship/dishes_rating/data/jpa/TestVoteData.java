@@ -1,8 +1,8 @@
 package ru.bolshakov.internship.dishes_rating.data.jpa;
 
-import ru.bolshakov.internship.dishes_rating.model.jpa.Restaurant;
-import ru.bolshakov.internship.dishes_rating.model.jpa.User;
-import ru.bolshakov.internship.dishes_rating.model.jpa.Vote;
+import ru.bolshakov.internship.dishes_rating.model.Restaurant;
+import ru.bolshakov.internship.dishes_rating.model.User;
+import ru.bolshakov.internship.dishes_rating.model.Vote;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
